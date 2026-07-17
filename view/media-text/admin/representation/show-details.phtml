@@ -1,0 +1,25 @@
+<div class="resource-details">
+    <h3 class="o-title"><?= $resource->link($resource->title()) ?></h3>
+
+    <div class="meta-group">
+        <h4><?= $this->translate('ID'); ?></h4>
+        <div class="value"><?= $this->escapeHtml($resource->id()) ?></div>
+    </div>
+
+    <div class="meta-group">
+        <h4><?= $this->translate('Type'); ?></h4>
+        <div class="value"><?= $this->escapeHtml($this->translate($resource->typeLabel())) ?></div>
+    </div>
+
+    <div class="meta-group">
+        <h4><?= $this->translate('Format'); ?></h4>
+        <div class="value"><?= $this->escapeHtml($this->translate($resource->formatLabel())) ?></div>
+    </div>
+
+    <div class="meta-group">
+        <h4><?= $this->translate('Content'); ?></h4>
+        <div class="value"><textarea disabled readonly rows="10"><?= $this->escapeHtml($resource->content()) ?></textarea></div>
+    </div>
+
+    <?php $this->trigger('view.details', ['entity' => $resource]); ?>
+</div>

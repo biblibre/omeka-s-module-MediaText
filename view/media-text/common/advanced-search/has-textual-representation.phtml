@@ -1,0 +1,23 @@
+<?php
+$hasTextualRepresentations = $query['mediatext_has_textual_representations'] ?? '';
+
+$hasTextualRepresentationsSelect = new Laminas\Form\Element\Select('mediatext_has_textual_representations');
+$hasTextualRepresentationsSelect->setLabel('Search by textual representations presence'); // @translate
+$hasTextualRepresentationsSelect->setValueOptions([
+    '1' => 'Has textual representations', // @translate
+    '0' => 'Has no textual representations', // @translate
+]);
+$hasTextualRepresentationsSelect->setEmptyOption('Select textual representation presence...'); // @translate
+$hasTextualRepresentationsSelect->setValue($hasTextualRepresentations);
+
+echo $this->formRow($hasTextualRepresentationsSelect);
+?>
+
+<script>
+    $(document).on('submit', '#advanced-search', function(e) {
+        const select = this.elements.namedItem('mediatext_has_textual_representations');
+        if (select && select.value === '') {
+            select.name = '';
+        }
+    });
+</script>

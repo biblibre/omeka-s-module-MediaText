@@ -1,0 +1,49 @@
+<?php
+/**
+ * @var MediaText\Api\Representation\MediatextDocumentRepresentation $mediatextDocument
+ * @var Omeka\Api\Representation\MediaRepresentation $media
+ */
+?>
+
+<div id="text-representations" class="section">
+    <?php if ($representations): ?>
+        <?php foreach ($representations as $representation): ?>
+            <div class="mediatext-representation row">
+                <span><?= $representation->link($representation->title()) ?></span>
+
+                <ul class="actions">
+                    <li><?= $representation->link('', 'edit', [
+                        'class' => 'o-icon-edit',
+                        'title' => $this->translate('Edit'),
+                    ]); ?></li>
+                    <li><?= $this->hyperlink('', '#', [
+                        'data-sidebar-selector' => '#mediatext-sidebar',
+                        'data-sidebar-content-url' => $representation->url('delete-confirm'),
+                        'class' => 'o-icon-delete sidebar-content',
+                        'title' => $this->translate('Delete'),
+                    ]); ?></li>
+                    <li><?= $this->hyperlink('', '#', [
+                        'data-sidebar-selector' => '#mediatext-sidebar',
+                        'data-sidebar-content-url' => $representation->url('show-details'),
+                        'class' => 'o-icon-more sidebar-content',
+                        'title' => $this->translate('Details'),
+                    ]); ?></li>
+                </ul>
+            </div>
+        <?php endforeach; ?>
+
+        <?= $this->hyperlink($this->translate('Add another text representation'), $this->url('admin/media-text/media-representation', ['media-id' => $media->id(), 'action' => 'add'])); ?>
+    <?php else: ?>
+        <?= $this->translate('This media has no text representations.'); ?>
+
+        <?= $this->hyperlink($this->translate('Add a text representation'), $this->url('admin/media-text/media-representation', ['media-id' => $media->id(), 'action' => 'add'])); ?>
+    <?php endif; ?>
+
+    <div id="mediatext-sidebar" class="sidebar">
+        <?php echo $this->hyperlink('', '#', [
+            'class' => 'sidebar-close o-icon-close',
+            'title' => $this->translate('Close'),
+        ]); ?>
+        <div class="sidebar-content"></div>
+    </div>
+</div>

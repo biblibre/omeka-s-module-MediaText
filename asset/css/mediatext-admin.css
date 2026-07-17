@@ -1,0 +1,23 @@
+textarea.mediatext-content {
+    white-space: pre-wrap;
+    resize: vertical;
+    width: 100%;
+}
+
+.mediatext-side-by-side {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+
+    * {
+        flex-grow: 1;
+    }
+}
+
+.mediatext-representation.row {
+    padding: 6px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    word-wrap: break-word;
+}

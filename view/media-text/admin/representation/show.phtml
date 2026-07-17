@@ -1,0 +1,36 @@
+<?php $this->htmlElement('body')->appendAttribute('class', 'mediatext-representations show'); ?>
+<?= $this->pageTitle($representation->title()) ?>
+
+<div id="page-actions">
+    <?= $this->hyperlink($this->translate('Go back'), $this->url('admin/id', ['controller' => 'media', 'id' => $representation->media()->id()], ['fragment' => 'text-representations']), ['class' => 'button']) ?>
+    <?= $representation->link($this->translate('Edit'), 'edit', ['class' => 'button']) ?>
+</div>
+
+<dl>
+    <div class="property">
+        <dt><?= $this->translate('ID'); ?></dt>
+        <dd class="value"><?= $this->escapeHtml($representation->id()) ?></dd>
+    </div>
+
+    <div class="property">
+        <dt><?= $this->translate('Type'); ?></dt>
+        <dd class="value"><?= $this->escapeHtml($this->translate($representation->typeLabel())) ?></dd>
+    </div>
+
+    <div class="property">
+        <dt><?= $this->translate('Format'); ?></dt>
+        <dd class="value"><?= $this->escapeHtml($this->translate($representation->formatLabel())) ?></dd>
+    </div>
+</dl>
+
+<div class="mediatext-side-by-side">
+    <label>
+        <?= $this->escapeHtml($this->translate('Content')) ?>
+        <textarea class="mediatext-content" rows="20" readonly><?= $this->escapeHtml($representation->content()) ?></textarea>
+    </label>
+
+    <label>
+        <?= $this->escapeHtml($this->translate('Content as plain text')) ?>
+        <textarea class="mediatext-content" rows="20" readonly><?= $this->escapeHtml($representation->contentAsPlainText()) ?></textarea>
+    </label>
+</div>

@@ -1,0 +1,18 @@
+<?php
+/**
+ * @var Omeka\Api\Representation\MediaRepresentation $media
+ */
+?>
+
+<?php $this->headLink()->appendStylesheet($this->assetUrl('css/mediatext-site.css', 'MediaText')); ?>
+<?php $representations = $this->api()->search('mediatext_representations', ['media_id' => $media->id()])->getContent(); ?>
+<?php if ($representations): ?>
+    <dl class="mediatext-text">
+        <?php foreach ($representations as $representation): ?>
+            <div class="property">
+                <dt><?= $this->escapeHtml($representation->title()) ?></dt>
+                <dd class="value"><?= $this->escapeHtml($representation->contentAsPlainText()) ?></dd>
+            </div>
+        <?php endforeach; ?>
+    </dl>
+<?php endif; ?>

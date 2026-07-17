@@ -1,0 +1,10 @@
+<?= $this->pageTitle($media->displayTitle(), 1, $this->translate('Media Text'), $this->translate('Add text representation')) ?>
+<?php $form->prepare(); ?>
+<?= $this->form()->openTag($form) ?>
+
+<div id="page-actions">
+    <button type="submit"><?= $this->escapeHtml($this->translate('Add')) ?></button>
+</div>
+
+<?= $this->formCollection($form) ?>
+<?= $this->form()->closeTag() ?>

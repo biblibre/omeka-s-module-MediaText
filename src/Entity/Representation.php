@@ -41,9 +41,31 @@ class Representation extends AbstractEntity
     protected $format;
 
     /**
+     * @Column(type="boolean")
+     */
+    protected $isPublic = true;
+
+    /**
+     * @Column(type="boolean")
+     */
+    protected $isExtracted = false;
+
+    /**
+     * @Column(type="integer")
+     */
+    protected $position = 0;
+
+    /**
+     * @Column(type="text", nullable=true)
+     */
+    protected $source;
+
+    /**
      * @Column(type="blob")
      */
     protected $compressedContent;
+
+    protected ?string $content = null;
 
     /**
      * @Column(type="datetime")
@@ -75,7 +97,7 @@ class Representation extends AbstractEntity
         $this->title = $title;
     }
 
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -85,7 +107,7 @@ class Representation extends AbstractEntity
         $this->type = $type;
     }
 
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
@@ -95,9 +117,49 @@ class Representation extends AbstractEntity
         $this->format = $format;
     }
 
-    public function getFormat(): string
+    public function getFormat(): ?string
     {
         return $this->format;
+    }
+
+    public function setIsPublic(bool $isPublic): void
+    {
+        $this->isPublic = $isPublic;
+    }
+
+    public function getIsPublic(): bool
+    {
+        return $this->isPublic;
+    }
+
+    public function setIsExtracted(bool $isExtracted): void
+    {
+        $this->isExtracted = $isExtracted;
+    }
+
+    public function getIsExtracted(): bool
+    {
+        return $this->isExtracted;
+    }
+
+    public function setPosition(int $position): void
+    {
+        $this->position = $position;
+    }
+
+    public function getPosition(): int
+    {
+        return $this->position;
+    }
+
+    public function setSource(?string $source): void
+    {
+        $this->source = $source;
+    }
+
+    public function getSource(): ?string
+    {
+        return $this->source;
     }
 
     public function setCompressedContent(string $compressedContent): void
@@ -105,13 +167,23 @@ class Representation extends AbstractEntity
         $this->compressedContent = $compressedContent;
     }
 
-    public function getCompressedContent(): string
+    public function getCompressedContent(): ?string
     {
         if (is_resource($this->compressedContent)) {
             $this->compressedContent = stream_get_contents($this->compressedContent, null, 0);
         }
 
         return $this->compressedContent;
+    }
+
+    public function setContent(?string $content): void
+    {
+        $this->content = $content;
+    }
+
+    public function getContent(): ?string
+    {
+        return $this->content;
     }
 
     public function setCreated(DateTime $created): void

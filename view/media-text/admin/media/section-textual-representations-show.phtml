@@ -5,22 +5,32 @@
  */
 ?>
 
-<div id="text-representations" class="section">
+<div id="textual-representations" class="section">
     <?php if ($representations): ?>
         <?php foreach ($representations as $representation): ?>
             <div class="mediatext-representation row">
-                <span><?= $representation->link($representation->title()) ?></span>
+                <span>
+                    <?= $representation->link($representation->title()) ?>
+                    <?php if (!$representation->isPublic()): ?>
+                        <span class="o-icon-private" aria-label="Private"></span>
+                    <?php endif; ?>
+                    <br>
+                    <small>
+                        <?= $this->escapeHtml($representation->typeLabel()) ?>
+                        ·
+                        <?= $this->escapeHtml($representation->formatLabel()) ?>
+                        <?php if ($representation->isExtracted()): ?>
+                            ·
+                            <?= $this->escapeHtml($this->translate('Automatically extracted')) ?>
+                        <?php endif; ?>
+                    </small>
+                </span>
+
 
                 <ul class="actions">
                     <li><?= $representation->link('', 'edit', [
                         'class' => 'o-icon-edit',
                         'title' => $this->translate('Edit'),
-                    ]); ?></li>
-                    <li><?= $this->hyperlink('', '#', [
-                        'data-sidebar-selector' => '#mediatext-sidebar',
-                        'data-sidebar-content-url' => $representation->url('delete-confirm'),
-                        'class' => 'o-icon-delete sidebar-content',
-                        'title' => $this->translate('Delete'),
                     ]); ?></li>
                     <li><?= $this->hyperlink('', '#', [
                         'data-sidebar-selector' => '#mediatext-sidebar',
@@ -32,11 +42,14 @@
             </div>
         <?php endforeach; ?>
 
-        <?= $this->hyperlink($this->translate('Add another text representation'), $this->url('admin/media-text/media-representation', ['media-id' => $media->id(), 'action' => 'add'])); ?>
     <?php else: ?>
-        <?= $this->translate('This media has no text representations.'); ?>
-
-        <?= $this->hyperlink($this->translate('Add a text representation'), $this->url('admin/media-text/media-representation', ['media-id' => $media->id(), 'action' => 'add'])); ?>
+            <div class="no-resources">
+                <p>
+                    <?= $this->translate('This media has no textual representations.'); ?>
+                    <br>
+                    <?= $this->translate('Start adding textual representations using the sidebar on the right'); ?>
+                </p>
+            </div>
     <?php endif; ?>
 
     <div id="mediatext-sidebar" class="sidebar">

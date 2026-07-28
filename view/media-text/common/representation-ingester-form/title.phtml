@@ -1,0 +1,8 @@
+<?php
+$title = new Laminas\Form\Element\Text('o:mediatext_representation[__index__][o:title]');
+$title->setLabel('Title'); // @translate
+$title->setAttribute('required', true);
+if (isset($value)) {
+    $title->setValue($value);
+}
+echo $this->formRow($title);

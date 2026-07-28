@@ -61,11 +61,31 @@ class RepresentationRepresentation extends AbstractEntityRepresentation
         return $this->resource->getFormat();
     }
 
+    public function position(): int
+    {
+        return $this->resource->getPosition();
+    }
+
+    public function isPublic(): bool
+    {
+        return $this->resource->getIsPublic();
+    }
+
+    public function isExtracted(): bool
+    {
+        return $this->resource->getIsExtracted();
+    }
+
+    public function source(): ?string
+    {
+        return $this->resource->getSource();
+    }
+
     public function content(): string
     {
         $compressedContent = $this->resource->getCompressedContent();
 
-        return gzdecode($compressedContent);
+        return zlib_decode($compressedContent);
     }
 
     public function contentAsPlainText(): string

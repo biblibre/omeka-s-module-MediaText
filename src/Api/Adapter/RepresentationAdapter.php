@@ -15,6 +15,7 @@ class RepresentationAdapter extends AbstractEntityAdapter
         'title' => 'title',
         'type' => 'type',
         'format' => 'format',
+        'position' => 'position',
         'created' => 'created',
         'modified' => 'modified',
     ];
@@ -24,6 +25,8 @@ class RepresentationAdapter extends AbstractEntityAdapter
         'title' => 'title',
         'type' => 'type',
         'format' => 'format',
+        'position' => 'position',
+        'source' => 'source',
         'created' => 'created',
         'modified' => 'modified',
     ];
@@ -45,9 +48,14 @@ class RepresentationAdapter extends AbstractEntityAdapter
 
     public function hydrate(Request $request, EntityInterface $entity, ErrorStore $errorStore)
     {
-        if ($this->shouldHydrate($request, 'o:media_id')) {
-            $mediaAdapter = $this->getAdapter('media');
-            $entity->setMedia($mediaAdapter->findEntity($request->getValue('o:media_id')));
+        $data = $request->getContent();
+
+        if ($request->getOperation() === Request::CREATE) {
+            if (isset($data['o:media']['o:id'])) {
+                $mediaAdapter = $this->getAdapter('media');
+                $media = $mediaAdapter->findEntity($data['o:media']['o:id']);
+                $entity->setMedia($media);
+            }
         }
 
         if ($this->shouldHydrate($request, 'o:title')) {
@@ -55,16 +63,33 @@ class RepresentationAdapter extends AbstractEntityAdapter
         }
 
         if ($this->shouldHydrate($request, 'o:type')) {
-            $entity->setType($request->getValue('o:type'));
+            $entity->setType($request->getValue('o:type', 'transcription'));
         }
 
         if ($this->shouldHydrate($request, 'o:format')) {
-            $entity->setFormat($request->getValue('o:format'));
+            $entity->setFormat($request->getValue('o:format', 'plain_text'));
         }
 
-        if ($this->shouldHydrate($request, 'o:content')) {
+        if ($this->shouldHydrate($request, 'o:is_public')) {
+            $entity->setIsPublic((bool) $request->getValue('o:is_public'));
+        }
+
+        $settings = $this->getServiceLocator()->get('Omeka\Settings');
+        $compressionLevel = (int) $settings->get('mediatext_compression_level', '-1');
+
+        if ($request->getOperation() === Request::UPDATE && $this->shouldHydrate($request, 'o:content')) {
             $content = $request->getValue('o:content');
 
+            $entity->setContent($content);
+        } elseif ($request->getOperation() === Request::CREATE) {
+            $ingesterName = $request->getValue('o:ingester');
+            $ingester = $this->getServiceLocator()->get('MediaText\RepresentationIngesterManager')->get($ingesterName);
+
+            $ingester->ingest($entity, $request, $errorStore);
+        }
+
+        $content = $entity->getContent();
+        if ($content !== null) {
             $formatAdapterManager = $this->getServiceLocator()->get('MediaText\FormatAdapterManager');
             $formatAdapter = $formatAdapterManager->get($entity->getFormat());
             $formatErrorStore = new ErrorStore;
@@ -72,16 +97,14 @@ class RepresentationAdapter extends AbstractEntityAdapter
             if ($formatErrorStore->hasErrors()) {
                 foreach ($formatErrorStore->getErrors() as $key => $errors) {
                     foreach ($errors as $error) {
-                        $errorStore->addError('o:content', $error);
+                        $errorStore->addError('error', $error);
                     }
                 }
                 return;
             }
 
-            $settings = $this->getServiceLocator()->get('Omeka\Settings');
-            $compressionLevel = (int) $settings->get('mediatext_compression_level', '-1');
-            $compressedContent = gzencode($content, $compressionLevel);
-            $entity->setCompressedContent($compressedContent);
+            $entity->setCompressedContent(gzencode($content, $compressionLevel));
+            $entity->setContent(null);
         }
 
         $this->updateTimestamps($request, $entity);
@@ -91,11 +114,6 @@ class RepresentationAdapter extends AbstractEntityAdapter
     {
         if (null === $entity->getMedia()) {
             $errorStore->addError('o:media_id', 'A representation needs to be associated with a media');
-        }
-
-        $compressedContent = $entity->getCompressedContent();
-        if ($compressedContent === null || $compressedContent === '') {
-            $errorStore->addError('o:content', 'A representation cannot be empty');
         }
     }
 

@@ -1,0 +1,13 @@
+<div class="field required">
+    <div class="field-meta">
+        <label><?= $this->escapeHtml($this->translate('Type')) ?></label>
+    </div>
+    <div class="inputs">
+        <?= $this->mediatextTypeSelect([
+            'name' => 'o:mediatext_representation[__index__][o:type]',
+            'attributes' => [
+                'required' => true,
+            ],
+        ]) ?>
+    </div>
+</div>

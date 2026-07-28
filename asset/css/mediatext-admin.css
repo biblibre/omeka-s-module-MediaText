@@ -21,3 +21,43 @@ textarea.mediatext-content {
     align-items: center;
     word-wrap: break-word;
 }
+
+.mediatext-representation-field-wrapper {
+    width: 100%;
+    padding: 12px 6px;
+    margin-bottom: 6px;
+    background-color: rgba(0,0,0,.04);
+    position: relative;
+}
+.mediatext-representation-field-wrapper .field {
+    width: 100%;
+    margin: 0 0 6px;
+    padding: 0;
+    background-color: transparent;
+}
+.mediatext-representation-field-wrapper .field:last-of-type {
+    margin-bottom: 0;
+}
+.mediatext-representation-field-wrapper .field:last-of-type .field-meta,
+.mediatext-representation-field-wrapper .field:last-of-type .inputs {
+    margin-bottom: -6px;
+}
+.mediatext-representation-field-wrapper .actions {
+    font-size: 16px;
+    padding: 6px 0;
+}
+
+.mediatext-representation-header {
+    font-size: 16px;
+    margin: 6px -6px;
+    margin-top: -12px;
+    background-color: rgba(0,0,0,.04);
+    padding: 0 6px;
+    display: flex;
+    align-items: center;
+}
+
+.show .mediatext-representation .o-icon-private {
+    margin-left: .5em;
+    opacity: .5;
+}

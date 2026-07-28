@@ -67,10 +67,10 @@ class Representation extends \MediaText\Entity\Representation implements \Doctri
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', 'id', 'media', 'title', 'type', 'format', 'compressedContent', 'created', 'modified'];
+            return ['__isInitialized__', 'id', 'media', 'title', 'type', 'format', 'isPublic', 'isExtracted', 'position', 'source', 'compressedContent', 'content', 'created', 'modified'];
         }
 
-        return ['__isInitialized__', 'id', 'media', 'title', 'type', 'format', 'compressedContent', 'created', 'modified'];
+        return ['__isInitialized__', 'id', 'media', 'title', 'type', 'format', 'isPublic', 'isExtracted', 'position', 'source', 'compressedContent', 'content', 'created', 'modified'];
     }
 
     /**
@@ -228,7 +228,7 @@ class Representation extends \MediaText\Entity\Representation implements \Doctri
     /**
      * {@inheritDoc}
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTitle', []);
@@ -250,7 +250,7 @@ class Representation extends \MediaText\Entity\Representation implements \Doctri
     /**
      * {@inheritDoc}
      */
-    public function getType(): string
+    public function getType(): ?string
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getType', []);
@@ -272,12 +272,100 @@ class Representation extends \MediaText\Entity\Representation implements \Doctri
     /**
      * {@inheritDoc}
      */
-    public function getFormat(): string
+    public function getFormat(): ?string
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getFormat', []);
 
         return parent::getFormat();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setIsPublic(bool $isPublic): void
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIsPublic', [$isPublic]);
+
+        parent::setIsPublic($isPublic);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getIsPublic(): bool
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIsPublic', []);
+
+        return parent::getIsPublic();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setIsExtracted(bool $isExtracted): void
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIsExtracted', [$isExtracted]);
+
+        parent::setIsExtracted($isExtracted);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getIsExtracted(): bool
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIsExtracted', []);
+
+        return parent::getIsExtracted();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setPosition(int $position): void
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPosition', [$position]);
+
+        parent::setPosition($position);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPosition(): int
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPosition', []);
+
+        return parent::getPosition();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setSource(?string $source): void
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSource', [$source]);
+
+        parent::setSource($source);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getSource(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSource', []);
+
+        return parent::getSource();
     }
 
     /**
@@ -294,12 +382,34 @@ class Representation extends \MediaText\Entity\Representation implements \Doctri
     /**
      * {@inheritDoc}
      */
-    public function getCompressedContent(): string
+    public function getCompressedContent(): ?string
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCompressedContent', []);
 
         return parent::getCompressedContent();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setContent(?string $content): void
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setContent', [$content]);
+
+        parent::setContent($content);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getContent(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getContent', []);
+
+        return parent::getContent();
     }
 
     /**

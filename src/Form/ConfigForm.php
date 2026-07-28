@@ -35,7 +35,7 @@ class ConfigForm extends Form
             'type' => 'Laminas\Form\Element\Checkbox',
             'options' => [
                 'label' => 'Start compression background job', // @translate
-                'info' => 'Start background job to recompress mediatext documents', // @translate
+                'info' => 'Start background job to recompress textual representations', // @translate
                 'use_hidden_element' => true,
                 'checked_value' => '1',
                 'unchecked_value' => '0',

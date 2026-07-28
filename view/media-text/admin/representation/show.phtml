@@ -2,7 +2,7 @@
 <?= $this->pageTitle($representation->title()) ?>
 
 <div id="page-actions">
-    <?= $this->hyperlink($this->translate('Go back'), $this->url('admin/id', ['controller' => 'media', 'id' => $representation->media()->id()], ['fragment' => 'text-representations']), ['class' => 'button']) ?>
+    <?= $this->hyperlink($this->translate('Go back'), $this->url('admin/id', ['controller' => 'media', 'id' => $representation->media()->id()], ['fragment' => 'textual-representations']), ['class' => 'button']) ?>
     <?= $representation->link($this->translate('Edit'), 'edit', ['class' => 'button']) ?>
 </div>
 
@@ -21,6 +21,13 @@
         <dt><?= $this->translate('Format'); ?></dt>
         <dd class="value"><?= $this->escapeHtml($this->translate($representation->formatLabel())) ?></dd>
     </div>
+
+    <?php if ($source = $representation->source()): ?>
+        <div class="property">
+            <dt><?= $this->translate('Source'); ?></dt>
+            <dd class="value"><?= $this->escapeHtml($source) ?></dd>
+        </div>
+    <?php endif; ?>
 </dl>
 
 <div class="mediatext-side-by-side">

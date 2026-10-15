@@ -48,7 +48,7 @@ class SolrSharedListenerAggregate
         if ($field === 'media/mediatext_text_content') {
             $mediatextRepresentationAdapter = $this->apiAdapterManager->get('mediatext_representations');
 
-            $query = $this->entityManager->createQuery(<<<'SQL'
+            $query = $this->em->createQuery(<<<'SQL'
                 SELECT r FROM MediaText\Entity\Representation r JOIN r.media m
                 WHERE m.item = :item_id
             SQL);
@@ -59,7 +59,7 @@ class SolrSharedListenerAggregate
             foreach ($representations as $representation) {
                 $representationRepresentation = $mediatextRepresentationAdapter->getRepresentation($representation);
                 $texts[] = $representationRepresentation->contentAsPlainText();
-                $this->entityManager->detach($representation);
+                $this->em->detach($representation);
             }
 
             if (!empty($texts)) {

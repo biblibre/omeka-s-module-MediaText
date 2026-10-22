@@ -6,6 +6,9 @@ This Omeka S module allows to manage media textual representations
 They can be imported from files, visualized, modified, and used in several ways
 (for display, search, ...).
 
+The complete documentation of Media Text can be found at
+<https://biblibre.github.io/omeka-s-module-MediaText>
+
 ## Requirements
 
 - Omeka S ≥ 4.2.0
@@ -33,6 +36,17 @@ If automated text extraction is needed, the following programs are required:
 - Integration with the [Solr](https://github.com/biblibre/omeka-s-module-Solr)
   module (makes the text content searchable)
 - Text documents are compressed using zlib to save disk space
+- Public/private visibility for each textual representation
+- Batch removal and batch extraction of textual representations for items and
+  media
+- Admin advanced search filter on the presence of textual representations
+- REST API, and extension points for other modules (formats, ingesters,
+  extractors)
+
+## How to contribute
+
+You can contribute to this module in many ways. Discover how by reading
+[Contributing](CONTRIBUTING.md).
 
 ## Contributors / Sponsors
 

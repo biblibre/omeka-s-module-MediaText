@@ -8,7 +8,7 @@ They can be imported from files, visualized, modified, and used in several ways
 
 ## Requirements
 
-- Omeka S ≥ 4.0.0
+- Omeka S ≥ 4.2.0
 - PHP extension zlib
 
 If automated text extraction is needed, the following programs are required:

@@ -107,6 +107,9 @@ passed to ``/api/items`` and ``/api/media`` to filter resources by presence of
 textual representations. It is only taken into account for admin requests (see
 :doc:`../mediatext-search`).
 
+
+.. _create:
+
 Create
 ------
 
@@ -165,7 +168,7 @@ key. This is what the admin interface uses. When this key is present:
 - an item with an ``o:id`` keeps an existing representation; its
   ``o:is_public`` can be changed,
 - an item without ``o:id`` creates a new representation (same keys as for
-  `Create`_, without ``o:media``),
+  :ref:`create`, without ``o:media``),
 - **existing representations of the media that are not listed are deleted**.
 
 .. code-block:: json

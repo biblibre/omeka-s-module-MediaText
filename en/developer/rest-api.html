@@ -203,7 +203,7 @@ textual representations. It is only taken into account for admin requests (see
 </section>
 </section>
 <section id="create">
-<h2>Create<a class="headerlink" href="#create" title="Link to this heading"></a></h2>
+<span id="id1"></span><h2>Create<a class="headerlink" href="#create" title="Link to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/api/mediatext_representations</span></code></p>
 <p>Representations are created through an <em>ingester</em> (see <a class="reference internal" href="extending.html"><span class="doc">Extending Media Text</span></a>),
 given by <code class="docutils literal notranslate"><span class="pre">o:ingester</span></code>. With the <code class="docutils literal notranslate"><span class="pre">textarea</span></code> ingester, the content is given
@@ -251,7 +251,7 @@ key. This is what the admin interface uses. When this key is present:</p>
 <li><p>an item with an <code class="docutils literal notranslate"><span class="pre">o:id</span></code> keeps an existing representation; its
 <code class="docutils literal notranslate"><span class="pre">o:is_public</span></code> can be changed,</p></li>
 <li><p>an item without <code class="docutils literal notranslate"><span class="pre">o:id</span></code> creates a new representation (same keys as for
-<a class="reference internal" href="#create">Create</a>, without <code class="docutils literal notranslate"><span class="pre">o:media</span></code>),</p></li>
+<a class="reference internal" href="#create"><span class="std std-ref">Create</span></a>, without <code class="docutils literal notranslate"><span class="pre">o:media</span></code>),</p></li>
 <li><p><strong>existing representations of the media that are not listed are deleted</strong>.</p></li>
 </ul>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>

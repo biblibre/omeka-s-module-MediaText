@@ -19,7 +19,7 @@ Properties
 Each textual representation has the following properties:
 
 Title
-    A free-form title (required). Automatically extracted representationsare
+    A free-form title (required). Automatically extracted representations are
     titled "Extracted by <extractor>" (for instance "Extracted by pdftotext").
 
 Type
@@ -32,7 +32,7 @@ Content
     The text itself.
 
 Visibility
-    Public or private. See `Visibility`_.
+    Public or private. See :ref:`visibility`.
 
 Source
     Where the content comes from. It is set automatically to the name of the

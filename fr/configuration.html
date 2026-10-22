@@ -21,8 +21,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="REST API" href="developer/rest-api.html" />
-    <link rel="prev" title="Public display" href="public-display.html" /> 
+    <link rel="next" title="API REST" href="developer/rest-api.html" />
+    <link rel="prev" title="Affichage public" href="public-display.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,25 +44,25 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">User documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Documentation utilisateur</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="textual-representations.html">Textual representations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="managing-representations.html">Managing textual representations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automated-extraction.html">Automated text extraction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch-edit.html">Batch edit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mediatext-search.html">Search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="public-display.html">Public display</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Prérequis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textual-representations.html">Représentations textuelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing-representations.html">Gérer les représentations textuelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automated-extraction.html">Extraction automatique du texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch-edit.html">Modification par lot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mediatext-search.html">Recherche</a></li>
+<li class="toctree-l1"><a class="reference internal" href="public-display.html">Affichage public</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#text-compression-level">Text compression level</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#start-compression-background-job">Start compression background job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#text-compression-level">Niveau de compression du texte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#start-compression-background-job">Lancer la tâche de compression en arrière-plan</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Developer documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation développeur</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="developer/rest-api.html">REST API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="developer/extending.html">Extending Media Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer/rest-api.html">API REST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer/extending.html">Étendre Media Text</a></li>
 </ul>
 
         </div>
@@ -91,33 +91,22 @@
              
   <section id="configuration">
 <h1>Configuration<a class="headerlink" href="#configuration" title="Lien vers cette rubrique"></a></h1>
-<p>The module configuration form is available in the admin interface, in
-<strong>Modules</strong>, by clicking on the <strong>Configure</strong> button of Media Text.</p>
+<p>Le formulaire de configuration du module est accessible dans l’interface d’administration, dans <strong>Modules</strong>, en cliquant sur le bouton <strong>Configurer</strong> de Media Text.</p>
 <section id="text-compression-level">
-<h2>Text compression level<a class="headerlink" href="#text-compression-level" title="Lien vers cette rubrique"></a></h2>
-<p>Media Text compresses the content of textual representations to reduce the
-space taken in the database. This setting allows to change the zlib
-compression level:</p>
+<h2>Niveau de compression du texte<a class="headerlink" href="#text-compression-level" title="Lien vers cette rubrique"></a></h2>
+<p>Media Text compresse le contenu des représentations textuelles afin de réduire l’espace occupé dans la base de données. Ce paramètre permet de modifier le niveau de compression zlib :</p>
 <ul class="simple">
-<li><p><em>Default compression level</em> (default): the zlib default, currently
-equivalent to 6,</p></li>
-<li><p><em>0 (no compression)</em>,</p></li>
-<li><p><em>1 (fastest)</em> to <em>9 (best compression)</em>.</p></li>
+<li><p><em>Niveau de compression par défaut</em> (par défaut) : la valeur par défaut de zlib, actuellement équivalente à 6,</p></li>
+<li><p><em>0 (aucune compression)</em>,</p></li>
+<li><p><em>1 (le plus rapide)</em> à <em>9 (meilleure compression)</em>.</p></li>
 </ul>
-<p>A higher level saves more disk space but takes more time to compress. The
-decompression time is not significantly affected.</p>
-<p>The new level is only applied to textual representations created or modified
-after the change. To apply it to existing representations, use the
-compression background job.</p>
+<p>Un niveau plus élevé économise davantage d’espace disque mais demande plus de temps de compression. Le temps de décompression n’est pas affecté de manière significative.</p>
+<p>Le nouveau niveau ne s’applique qu’aux représentations textuelles créées ou modifiées après le changement. Pour l’appliquer aux représentations existantes, utilisez la tâche de compression en arrière-plan.</p>
 </section>
 <section id="start-compression-background-job">
-<h2>Start compression background job<a class="headerlink" href="#start-compression-background-job" title="Lien vers cette rubrique"></a></h2>
-<p>When this box is checked, saving the configuration form starts a background
-job that recompresses all existing textual representations with the selected
-compression level. A link to the job details is displayed.</p>
-<p>The job logs its progress every 100 representations. It can be stopped from
-the job details page; representations already processed keep their new
-compression level.</p>
+<h2>Lancer la tâche de compression en arrière-plan<a class="headerlink" href="#start-compression-background-job" title="Lien vers cette rubrique"></a></h2>
+<p>Lorsque cette case est cochée, l’enregistrement du formulaire de configuration lance une tâche en arrière-plan qui recompresse toutes les représentations textuelles existantes avec le niveau de compression sélectionné. Un lien vers le détail de la tâche est affiché.</p>
+<p>La tâche journalise sa progression toutes les 100 représentations. Elle peut être arrêtée depuis la page de détail de la tâche ; les représentations déjà traitées conservent leur nouveau niveau de compression.</p>
 </section>
 </section>
 
@@ -125,8 +114,8 @@ compression level.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
-        <a href="public-display.html" class="btn btn-neutral float-left" title="Public display" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
-        <a href="developer/rest-api.html" class="btn btn-neutral float-right" title="REST API" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="public-display.html" class="btn btn-neutral float-left" title="Affichage public" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="developer/rest-api.html" class="btn btn-neutral float-right" title="API REST" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

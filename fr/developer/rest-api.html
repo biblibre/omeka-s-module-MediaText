@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>REST API &mdash; Documentation Media Text </title>
+  <title>API REST &mdash; Documentation Media Text </title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=e9c544c0" />
@@ -21,7 +21,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Extending Media Text" href="extending.html" />
+    <link rel="next" title="Étendre Media Text" href="extending.html" />
     <link rel="prev" title="Configuration" href="../configuration.html" /> 
 </head>
 
@@ -44,35 +44,35 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">User documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Documentation utilisateur</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../textual-representations.html">Textual representations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../managing-representations.html">Managing textual representations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../automated-extraction.html">Automated text extraction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../batch-edit.html">Batch edit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mediatext-search.html">Search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../public-display.html">Public display</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Prérequis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../textual-representations.html">Représentations textuelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../managing-representations.html">Gérer les représentations textuelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../automated-extraction.html">Extraction automatique du texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../batch-edit.html">Modification par lot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mediatext-search.html">Recherche</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../public-display.html">Affichage public</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Developer documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation développeur</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">REST API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#representation-json-ld">Representation JSON-LD</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#media-json-ld">Media JSON-LD</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API REST</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#representation-json-ld">JSON-LD d’une représentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#media-json-ld">JSON-LD d’un média</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#search">Search</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#items-and-media-search">Items and media search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#search">Recherche</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#items-and-media-search">Recherche de contenus et de médias</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#create">Create</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#update">Update</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#delete">Delete</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#managing-representations-through-the-media">Managing representations through the media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create">Créer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update">Modifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete">Supprimer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#managing-representations-through-the-media">Gérer les représentations via le média</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="extending.html">Extending Media Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">Étendre Media Text</a></li>
 </ul>
 
         </div>
@@ -89,7 +89,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">REST API</li>
+      <li class="breadcrumb-item active">API REST</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/developer/rest-api.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
@@ -100,15 +100,11 @@
            <div itemprop="articleBody">
              
   <section id="rest-api">
-<h1>REST API<a class="headerlink" href="#rest-api" title="Lien vers cette rubrique"></a></h1>
-<p>Media Text adds a new API resource named <code class="docutils literal notranslate"><span class="pre">mediatext_representations</span></code>.
-It can be used through the Omeka S <a class="reference external" href="https://omeka.org/s/docs/developer/api/rest_api/">REST API</a> and the PHP API
-(<code class="docutils literal notranslate"><span class="pre">$api-&gt;search('mediatext_representations',</span> <span class="pre">...)</span></code>).</p>
-<p>The usual Omeka S rules apply: authentication with key identity and key
-credential is needed to create, update and delete representations, and to read
-private ones (see <a class="reference internal" href="../textual-representations.html#visibility"><span class="std std-ref">Visibility</span></a>).</p>
+<h1>API REST<a class="headerlink" href="#rest-api" title="Lien vers cette rubrique"></a></h1>
+<p>Media Text ajoute une nouvelle ressource d’API nommée <code class="docutils literal notranslate"><span class="pre">mediatext_representations</span></code>. Elle peut être utilisée via l”<a class="reference external" href="https://omeka.org/s/docs/developer/api/rest_api/">API REST</a> d’Omeka S et l’API PHP (<code class="docutils literal notranslate"><span class="pre">$api-&gt;search('mediatext_representations',</span> <span class="pre">...)</span></code>).</p>
+<p>Les règles habituelles d’Omeka S s’appliquent : une authentification par identité de clé (<em>key identity</em>) et identifiant de clé (<em>key credential</em>) est nécessaire pour créer, modifier et supprimer des représentations, ainsi que pour lire les représentations privées (voir <a class="reference internal" href="../textual-representations.html#visibility"><span class="std std-ref">Visibilité</span></a>).</p>
 <section id="representation-json-ld">
-<h2>Representation JSON-LD<a class="headerlink" href="#representation-json-ld" title="Lien vers cette rubrique"></a></h2>
+<h2>JSON-LD d’une représentation<a class="headerlink" href="#representation-json-ld" title="Lien vers cette rubrique"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/api/mediatext_representations/:id</span></code></p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span>
@@ -133,17 +129,12 @@ private ones (see <a class="reference internal" href="../textual-representations
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">o:content</span></code> is returned uncompressed, in its original format (not converted
-to plain text).</p>
-<p>Values of <code class="docutils literal notranslate"><span class="pre">o:type</span></code>: <code class="docutils literal notranslate"><span class="pre">transcription</span></code>, <code class="docutils literal notranslate"><span class="pre">transliteration</span></code>, <code class="docutils literal notranslate"><span class="pre">translation</span></code>,
-<code class="docutils literal notranslate"><span class="pre">other</span></code>.</p>
-<p>Values of <code class="docutils literal notranslate"><span class="pre">o:format</span></code>: <code class="docutils literal notranslate"><span class="pre">plain_text</span></code>, <code class="docutils literal notranslate"><span class="pre">alto</span></code> (and any format added by
-other modules, see <a class="reference internal" href="extending.html"><span class="doc">Extending Media Text</span></a>).</p>
+<p><code class="docutils literal notranslate"><span class="pre">o:content</span></code> est retourné décompressé, dans son format d’origine (non converti en texte brut).</p>
+<p>Valeurs de <code class="docutils literal notranslate"><span class="pre">o:type</span></code> : <code class="docutils literal notranslate"><span class="pre">transcription</span></code>, <code class="docutils literal notranslate"><span class="pre">transliteration</span></code>, <code class="docutils literal notranslate"><span class="pre">translation</span></code>, <code class="docutils literal notranslate"><span class="pre">other</span></code>.</p>
+<p>Valeurs de <code class="docutils literal notranslate"><span class="pre">o:format</span></code> : <code class="docutils literal notranslate"><span class="pre">plain_text</span></code>, <code class="docutils literal notranslate"><span class="pre">alto</span></code> (et tout format ajouté par d’autres modules, voir <a class="reference internal" href="extending.html"><span class="doc">Étendre Media Text</span></a>).</p>
 <section id="media-json-ld">
-<h3>Media JSON-LD<a class="headerlink" href="#media-json-ld" title="Lien vers cette rubrique"></a></h3>
-<p>The JSON-LD of a media that has textual representations contains an
-additional key, <code class="docutils literal notranslate"><span class="pre">o-module-mediatext:representations</span></code>, with references to
-these representations:</p>
+<h3>JSON-LD d’un média<a class="headerlink" href="#media-json-ld" title="Lien vers cette rubrique"></a></h3>
+<p>Le JSON-LD d’un média qui possède des représentations textuelles contient une clé supplémentaire, <code class="docutils literal notranslate"><span class="pre">o-module-mediatext:representations</span></code>, avec des références vers ces représentations :</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.org/api/media/42"</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">"o:id"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span>
@@ -160,26 +151,25 @@ these representations:</p>
 </section>
 </section>
 <section id="search">
-<h2>Search<a class="headerlink" href="#search" title="Lien vers cette rubrique"></a></h2>
+<h2>Recherche<a class="headerlink" href="#search" title="Lien vers cette rubrique"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/api/mediatext_representations</span></code></p>
-<p>Available query parameters (in addition to the standard ones like <code class="docutils literal notranslate"><span class="pre">page</span></code>,
-<code class="docutils literal notranslate"><span class="pre">per_page</span></code>, <code class="docutils literal notranslate"><span class="pre">sort_by</span></code>, <code class="docutils literal notranslate"><span class="pre">sort_order</span></code>):</p>
+<p>Paramètres de requête disponibles (en plus des paramètres standards comme <code class="docutils literal notranslate"><span class="pre">page</span></code>, <code class="docutils literal notranslate"><span class="pre">per_page</span></code>, <code class="docutils literal notranslate"><span class="pre">sort_by</span></code>, <code class="docutils literal notranslate"><span class="pre">sort_order</span></code>) :</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 20.0%" />
 <col style="width: 80.0%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<tr class="row-odd"><th class="head"><p>Paramètre</p></th>
 <th class="head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">media_id</span></code></p></td>
-<td><p>ID of the media</p></td>
+<td><p>ID du média</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">title</span></code></p></td>
-<td><p>Exact title</p></td>
+<td><p>Titre exact</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">type</span></code></p></td>
 <td><p>Type (<code class="docutils literal notranslate"><span class="pre">transcription</span></code>, <code class="docutils literal notranslate"><span class="pre">transliteration</span></code>, …)</p></td>
@@ -189,26 +179,20 @@ these representations:</p>
 </tr>
 </tbody>
 </table>
-<p><code class="docutils literal notranslate"><span class="pre">sort_by</span></code> accepts: <code class="docutils literal notranslate"><span class="pre">id</span></code>, <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">type</span></code>, <code class="docutils literal notranslate"><span class="pre">format</span></code>, <code class="docutils literal notranslate"><span class="pre">position</span></code>,
-<code class="docutils literal notranslate"><span class="pre">created</span></code>, <code class="docutils literal notranslate"><span class="pre">modified</span></code>.</p>
-<p>Example: all representations of media 42, in order:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sort_by</span></code> accepte : <code class="docutils literal notranslate"><span class="pre">id</span></code>, <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">type</span></code>, <code class="docutils literal notranslate"><span class="pre">format</span></code>, <code class="docutils literal notranslate"><span class="pre">position</span></code>, <code class="docutils literal notranslate"><span class="pre">created</span></code>, <code class="docutils literal notranslate"><span class="pre">modified</span></code>.</p>
+<p>Exemple : toutes les représentations du média 42, dans l’ordre</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>GET /api/mediatext_representations?media_id=42&amp;sort_by=position&amp;sort_order=asc
 </pre></div>
 </div>
 <section id="items-and-media-search">
-<h3>Items and media search<a class="headerlink" href="#items-and-media-search" title="Lien vers cette rubrique"></a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">mediatext_has_textual_representations</span></code> parameter (<code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">0</span></code>) can be
-passed to <code class="docutils literal notranslate"><span class="pre">/api/items</span></code> and <code class="docutils literal notranslate"><span class="pre">/api/media</span></code> to filter resources by presence of
-textual representations. It is only taken into account for admin requests (see
-<a class="reference internal" href="../mediatext-search.html"><span class="doc">Search</span></a>).</p>
+<h3>Recherche de contenus et de médias<a class="headerlink" href="#items-and-media-search" title="Lien vers cette rubrique"></a></h3>
+<p>Le paramètre <code class="docutils literal notranslate"><span class="pre">mediatext_has_textual_representations</span></code> (<code class="docutils literal notranslate"><span class="pre">1</span></code> ou <code class="docutils literal notranslate"><span class="pre">0</span></code>) peut être passé à <code class="docutils literal notranslate"><span class="pre">/api/items</span></code> et <code class="docutils literal notranslate"><span class="pre">/api/media</span></code> pour filtrer les ressources selon la présence de représentations textuelles. Il n’est pris en compte que pour les requêtes d’administration (voir <a class="reference internal" href="../mediatext-search.html"><span class="doc">Recherche</span></a>).</p>
 </section>
 </section>
 <section id="create">
-<h2>Create<a class="headerlink" href="#create" title="Lien vers cette rubrique"></a></h2>
+<span id="id1"></span><h2>Créer<a class="headerlink" href="#create" title="Lien vers cette rubrique"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/api/mediatext_representations</span></code></p>
-<p>Representations are created through an <em>ingester</em> (see <a class="reference internal" href="extending.html"><span class="doc">Extending Media Text</span></a>),
-given by <code class="docutils literal notranslate"><span class="pre">o:ingester</span></code>. With the <code class="docutils literal notranslate"><span class="pre">textarea</span></code> ingester, the content is given
-in the <code class="docutils literal notranslate"><span class="pre">content</span></code> key:</p>
+<p>Les représentations sont créées via un <em>ingesteur</em> (voir <a class="reference internal" href="extending.html"><span class="doc">Étendre Media Text</span></a>), indiqué par <code class="docutils literal notranslate"><span class="pre">o:ingester</span></code>. Avec l’ingesteur <code class="docutils literal notranslate"><span class="pre">textarea</span></code>, le contenu est fourni dans la clé <code class="docutils literal notranslate"><span class="pre">content</span></code> :</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"o:media"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"o:id"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">},</span>
 <span class="w">    </span><span class="nt">"o:title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Transcription"</span><span class="p">,</span>
@@ -220,40 +204,30 @@ in the <code class="docutils literal notranslate"><span class="pre">content</spa
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>With the <code class="docutils literal notranslate"><span class="pre">upload</span></code> ingester, send a <code class="docutils literal notranslate"><span class="pre">multipart/form-data</span></code> request with the
-JSON data in the <code class="docutils literal notranslate"><span class="pre">data</span></code> field, the file in <code class="docutils literal notranslate"><span class="pre">upload_file[&lt;index&gt;]</span></code>, and
-the same <code class="docutils literal notranslate"><span class="pre">&lt;index&gt;</span></code> in the <code class="docutils literal notranslate"><span class="pre">file_index</span></code> key of the JSON data. The file
-name is stored as source, unless <code class="docutils literal notranslate"><span class="pre">o:source</span></code> is given.</p>
-<p>The content is validated according to its format; validation errors are
-returned as usual by the API.</p>
+<p>Avec l’ingesteur <code class="docutils literal notranslate"><span class="pre">upload</span></code>, envoyez une requête <code class="docutils literal notranslate"><span class="pre">multipart/form-data</span></code> avec les données JSON dans le champ <code class="docutils literal notranslate"><span class="pre">data</span></code>, le fichier dans <code class="docutils literal notranslate"><span class="pre">upload_file[&lt;index&gt;]</span></code>, et le même <code class="docutils literal notranslate"><span class="pre">&lt;index&gt;</span></code> dans la clé <code class="docutils literal notranslate"><span class="pre">file_index</span></code> des données JSON. Le nom du fichier est enregistré comme source, sauf si <code class="docutils literal notranslate"><span class="pre">o:source</span></code> est fourni.</p>
+<p>Le contenu est validé en fonction de son format ; les erreurs de validation sont retournées de la manière habituelle par l’API.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A representation created this way gets the position <code class="docutils literal notranslate"><span class="pre">0</span></code>. Use the media
-update described below to control the order of representations.</p>
+<p>Une représentation créée de cette manière reçoit la position <code class="docutils literal notranslate"><span class="pre">0</span></code>. Utilisez la mise à jour du média décrite ci-dessous pour contrôler l’ordre des représentations.</p>
 </div>
 </section>
 <section id="update">
-<h2>Update<a class="headerlink" href="#update" title="Lien vers cette rubrique"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">PATCH</span> <span class="pre">/api/mediatext_representations/:id</span></code> (or <code class="docutils literal notranslate"><span class="pre">PUT</span></code>)</p>
-<p>Accepted keys: <code class="docutils literal notranslate"><span class="pre">o:title</span></code>, <code class="docutils literal notranslate"><span class="pre">o:type</span></code>, <code class="docutils literal notranslate"><span class="pre">o:format</span></code>, <code class="docutils literal notranslate"><span class="pre">o:is_public</span></code>,
-<code class="docutils literal notranslate"><span class="pre">o:content</span></code>. The content is validated according to the format.</p>
+<h2>Modifier<a class="headerlink" href="#update" title="Lien vers cette rubrique"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">PATCH</span> <span class="pre">/api/mediatext_representations/:id</span></code> (ou <code class="docutils literal notranslate"><span class="pre">PUT</span></code>)</p>
+<p>Clés acceptées : <code class="docutils literal notranslate"><span class="pre">o:title</span></code>, <code class="docutils literal notranslate"><span class="pre">o:type</span></code>, <code class="docutils literal notranslate"><span class="pre">o:format</span></code>, <code class="docutils literal notranslate"><span class="pre">o:is_public</span></code>, <code class="docutils literal notranslate"><span class="pre">o:content</span></code>. Le contenu est validé en fonction du format.</p>
 </section>
 <section id="delete">
-<h2>Delete<a class="headerlink" href="#delete" title="Lien vers cette rubrique"></a></h2>
+<h2>Supprimer<a class="headerlink" href="#delete" title="Lien vers cette rubrique"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">DELETE</span> <span class="pre">/api/mediatext_representations/:id</span></code></p>
 </section>
 <section id="managing-representations-through-the-media">
-<h2>Managing representations through the media<a class="headerlink" href="#managing-representations-through-the-media" title="Lien vers cette rubrique"></a></h2>
-<p>Representations can also be managed when updating a media
-(<code class="docutils literal notranslate"><span class="pre">PUT</span></code>/<code class="docutils literal notranslate"><span class="pre">PATCH</span> <span class="pre">/api/media/:id</span></code>), with the <code class="docutils literal notranslate"><span class="pre">o:mediatext_representation</span></code>
-key. This is what the admin interface uses. When this key is present:</p>
+<h2>Gérer les représentations via le média<a class="headerlink" href="#managing-representations-through-the-media" title="Lien vers cette rubrique"></a></h2>
+<p>Les représentations peuvent aussi être gérées lors de la mise à jour d’un média (<code class="docutils literal notranslate"><span class="pre">PUT</span></code>/<code class="docutils literal notranslate"><span class="pre">PATCH</span> <span class="pre">/api/media/:id</span></code>), avec la clé <code class="docutils literal notranslate"><span class="pre">o:mediatext_representation</span></code>. C’est ce qu’utilise l’interface d’administration. Lorsque cette clé est présente :</p>
 <ul class="simple">
-<li><p>its items are processed in order and their position is set accordingly,</p></li>
-<li><p>an item with an <code class="docutils literal notranslate"><span class="pre">o:id</span></code> keeps an existing representation; its
-<code class="docutils literal notranslate"><span class="pre">o:is_public</span></code> can be changed,</p></li>
-<li><p>an item without <code class="docutils literal notranslate"><span class="pre">o:id</span></code> creates a new representation (same keys as for
-<a class="reference internal" href="#create">Create</a>, without <code class="docutils literal notranslate"><span class="pre">o:media</span></code>),</p></li>
-<li><p><strong>existing representations of the media that are not listed are deleted</strong>.</p></li>
+<li><p>ses éléments sont traités dans l’ordre et leur position est définie en conséquence,</p></li>
+<li><p>un élément avec un <code class="docutils literal notranslate"><span class="pre">o:id</span></code> conserve une représentation existante ; son <code class="docutils literal notranslate"><span class="pre">o:is_public</span></code> peut être modifié,</p></li>
+<li><p>un élément sans <code class="docutils literal notranslate"><span class="pre">o:id</span></code> crée une nouvelle représentation (mêmes clés que pour <a class="reference internal" href="#create"><span class="std std-ref">Créer</span></a>, sans <code class="docutils literal notranslate"><span class="pre">o:media</span></code>),</p></li>
+<li><p><strong>les représentations existantes du média qui ne sont pas listées sont supprimées</strong>.</p></li>
 </ul>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"o:mediatext_representation"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -270,19 +244,14 @@ key. This is what the admin interface uses. When this key is present:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Additional keys are accepted when updating media and items (including batch
-updates):</p>
+<p>Des clés supplémentaires sont acceptées lors de la mise à jour de médias et de contenus (y compris les mises à jour par lot) :</p>
 <dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">mediatext_remove_representations</span></code></dt><dd><p><code class="docutils literal notranslate"><span class="pre">all</span></code> to remove all representations, <code class="docutils literal notranslate"><span class="pre">extracted</span></code> to remove only
-automatically extracted representations. For items, applies to all their
-media.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">mediatext_remove_representations</span></code></dt><dd><p><code class="docutils literal notranslate"><span class="pre">all</span></code> pour supprimer toutes les représentations, <code class="docutils literal notranslate"><span class="pre">extracted</span></code> pour supprimer uniquement les représentations extraites automatiquement. Pour les contenus, s’applique à tous leurs médias.</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">mediatext_extractors</span></code></dt><dd><p>An array of extractor names (<code class="docutils literal notranslate"><span class="pre">pdftotext</span></code>, <code class="docutils literal notranslate"><span class="pre">odt2txt</span></code>, <code class="docutils literal notranslate"><span class="pre">docx2txt</span></code>,
-<code class="docutils literal notranslate"><span class="pre">catdoc</span></code>, <code class="docutils literal notranslate"><span class="pre">tesseract</span></code>) to run on the media (for items, on all their
-media). See <a class="reference internal" href="../automated-extraction.html"><span class="doc">Automated text extraction</span></a>.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">mediatext_extractors</span></code></dt><dd><p>Un tableau de noms d’extracteurs (<code class="docutils literal notranslate"><span class="pre">pdftotext</span></code>, <code class="docutils literal notranslate"><span class="pre">odt2txt</span></code>, <code class="docutils literal notranslate"><span class="pre">docx2txt</span></code>, <code class="docutils literal notranslate"><span class="pre">catdoc</span></code>, <code class="docutils literal notranslate"><span class="pre">tesseract</span></code>) à exécuter sur le média (pour les contenus, sur tous leurs médias). Voir <a class="reference internal" href="../automated-extraction.html"><span class="doc">Extraction automatique du texte</span></a>.</p>
 </dd>
 </dl>
-<p>On media creation, all available extractors are run automatically.</p>
+<p>À la création d’un média, tous les extracteurs disponibles sont exécutés automatiquement.</p>
 </section>
 </section>
 
@@ -291,7 +260,7 @@ media). See <a class="reference internal" href="../automated-extraction.html"><s
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
         <a href="../configuration.html" class="btn btn-neutral float-left" title="Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
-        <a href="extending.html" class="btn btn-neutral float-right" title="Extending Media Text" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="extending.html" class="btn btn-neutral float-right" title="Étendre Media Text" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

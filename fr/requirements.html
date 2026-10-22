@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Requirements &mdash; Documentation Media Text </title>
+  <title>Prérequis &mdash; Documentation Media Text </title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=e9c544c0" />
@@ -21,7 +21,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Textual representations" href="textual-representations.html" />
+    <link rel="next" title="Représentations textuelles" href="textual-representations.html" />
     <link rel="prev" title="Introduction" href="index.html" /> 
 </head>
 
@@ -44,25 +44,25 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">User documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Documentation utilisateur</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Requirements</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installing-the-extraction-programs">Installing the extraction programs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Prérequis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installing-the-extraction-programs">Installer les programmes d’extraction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="textual-representations.html">Textual representations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="managing-representations.html">Managing textual representations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automated-extraction.html">Automated text extraction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch-edit.html">Batch edit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mediatext-search.html">Search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="public-display.html">Public display</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textual-representations.html">Représentations textuelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing-representations.html">Gérer les représentations textuelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automated-extraction.html">Extraction automatique du texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch-edit.html">Modification par lot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mediatext-search.html">Recherche</a></li>
+<li class="toctree-l1"><a class="reference internal" href="public-display.html">Affichage public</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Developer documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation développeur</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="developer/rest-api.html">REST API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="developer/extending.html">Extending Media Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer/rest-api.html">API REST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer/extending.html">Étendre Media Text</a></li>
 </ul>
 
         </div>
@@ -79,7 +79,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Requirements</li>
+      <li class="breadcrumb-item active">Prérequis</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/requirements.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
@@ -90,42 +90,33 @@
            <div itemprop="articleBody">
              
   <section id="requirements">
-<h1>Requirements<a class="headerlink" href="#requirements" title="Lien vers cette rubrique"></a></h1>
+<h1>Prérequis<a class="headerlink" href="#requirements" title="Lien vers cette rubrique"></a></h1>
 <ul class="simple">
 <li><p>Omeka S ≥ 4.2.0</p></li>
-<li><p>PHP extension zlib</p></li>
+<li><p>Extension PHP zlib</p></li>
 </ul>
-<p>If automated text extraction is needed, the following programs are required:</p>
+<p>Si l’extraction automatique du texte est nécessaire, les programmes suivants sont requis :</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pdftotext</span></code> (for .pdf files)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">odt2txt</span></code> (for .odt files)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">docx2txt</span></code> (for .docx files)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">catdoc</span></code> (for .doc files)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tesseract</span></code> (for .png files)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pdftotext</span></code> (pour les fichiers .pdf)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">odt2txt</span></code> (pour les fichiers .odt)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docx2txt</span></code> (pour les fichiers .docx)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">catdoc</span></code> (pour les fichiers .doc)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tesseract</span></code> (pour les fichiers .png)</p></li>
 </ul>
-<p>None of these programs is mandatory. Each one is only needed for the file type
-it handles. See <a class="reference internal" href="automated-extraction.html"><span class="doc">Automated text extraction</span></a> for more details.</p>
+<p>Aucun de ces programmes n’est obligatoire. Chacun n’est nécessaire que pour le type de fichier qu’il traite. Voir <a class="reference internal" href="automated-extraction.html"><span class="doc">Extraction automatique du texte</span></a> pour plus de détails.</p>
 <section id="installing-the-extraction-programs">
-<h2>Installing the extraction programs<a class="headerlink" href="#installing-the-extraction-programs" title="Lien vers cette rubrique"></a></h2>
-<p>On Debian and Ubuntu, all programs can be installed with:</p>
+<h2>Installer les programmes d’extraction<a class="headerlink" href="#installing-the-extraction-programs" title="Lien vers cette rubrique"></a></h2>
+<p>Sous Debian et Ubuntu, tous les programmes peuvent être installés avec :</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>apt<span class="w"> </span>install<span class="w"> </span>poppler-utils<span class="w"> </span>odt2txt<span class="w"> </span>docx2txt<span class="w"> </span>catdoc<span class="w"> </span>tesseract-ocr
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">tesseract-ocr</span></code> only installs the English language data. Additional
-languages can be installed with the corresponding <code class="docutils literal notranslate"><span class="pre">tesseract-ocr-&lt;lang&gt;</span></code>
-packages (for instance <code class="docutils literal notranslate"><span class="pre">tesseract-ocr-fra</span></code> for French).</p>
-<p>The programs are looked up in the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> of the user that runs Omeka S (for
-instance <code class="docutils literal notranslate"><span class="pre">www-data</span></code>), using <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">-v</span></code>. If a program is installed in a
-non-standard location, make sure that this location is in the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> of that
-user.</p>
+<p><code class="docutils literal notranslate"><span class="pre">tesseract-ocr</span></code> n’installe que les données de langue anglaise. D’autres langues peuvent être installées avec les paquets <code class="docutils literal notranslate"><span class="pre">tesseract-ocr-&lt;lang&gt;</span></code> correspondants (par exemple <code class="docutils literal notranslate"><span class="pre">tesseract-ocr-fra</span></code> pour le français).</p>
+<p>Les programmes sont recherchés dans le <code class="docutils literal notranslate"><span class="pre">PATH</span></code> de l’utilisateur qui exécute Omeka S (par exemple <code class="docutils literal notranslate"><span class="pre">www-data</span></code>), à l’aide de <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">-v</span></code>. Si un programme est installé dans un emplacement non standard, assurez-vous que cet emplacement figure dans le <code class="docutils literal notranslate"><span class="pre">PATH</span></code> de cet utilisateur.</p>
 </section>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Lien vers cette rubrique"></a></h2>
-<p>Install the module like any other Omeka S module. See <a class="reference external" href="https://omeka.org/s/docs/user-manual/modules/#adding-modules-to-omeka-s">Adding modules to Omeka
-S</a>.</p>
-<p>Installing the module creates a database table named
-<code class="docutils literal notranslate"><span class="pre">mediatext_representation</span></code>. Uninstalling the module deletes this table, and
-therefore <strong>all textual representations</strong>.</p>
+<p>Installez le module comme n’importe quel autre module Omeka S. Voir <a class="reference external" href="https://omeka.org/s/docs/user-manual/modules/#adding-modules-to-omeka-s">Adding modules to Omeka S</a> (en anglais).</p>
+<p>L’installation du module crée une table de base de données nommée <code class="docutils literal notranslate"><span class="pre">mediatext_representation</span></code>. La désinstallation du module supprime cette table, et donc <strong>toutes les représentations textuelles</strong>.</p>
 </section>
 </section>
 
@@ -134,7 +125,7 @@ therefore <strong>all textual representations</strong>.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
         <a href="index.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
-        <a href="textual-representations.html" class="btn btn-neutral float-right" title="Textual representations" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="textual-representations.html" class="btn btn-neutral float-right" title="Représentations textuelles" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

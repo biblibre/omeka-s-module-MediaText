@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Batch edit &mdash; Documentation Media Text </title>
+  <title>Modification par lot &mdash; Documentation Media Text </title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=e9c544c0" />
@@ -21,8 +21,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Search" href="mediatext-search.html" />
-    <link rel="prev" title="Automated text extraction" href="automated-extraction.html" /> 
+    <link rel="next" title="Recherche" href="mediatext-search.html" />
+    <link rel="prev" title="Extraction automatique du texte" href="automated-extraction.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,24 +44,24 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">User documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Documentation utilisateur</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="textual-representations.html">Textual representations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="managing-representations.html">Managing textual representations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automated-extraction.html">Automated text extraction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Batch edit</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Prérequis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textual-representations.html">Représentations textuelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing-representations.html">Gérer les représentations textuelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automated-extraction.html">Extraction automatique du texte</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Modification par lot</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#options">Options</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mediatext-search.html">Search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="public-display.html">Public display</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mediatext-search.html">Recherche</a></li>
+<li class="toctree-l1"><a class="reference internal" href="public-display.html">Affichage public</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Developer documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation développeur</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="developer/rest-api.html">REST API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="developer/extending.html">Extending Media Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer/rest-api.html">API REST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer/extending.html">Étendre Media Text</a></li>
 </ul>
 
         </div>
@@ -78,7 +78,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Batch edit</li>
+      <li class="breadcrumb-item active">Modification par lot</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/batch-edit.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
@@ -89,45 +89,27 @@
            <div itemprop="articleBody">
              
   <section id="batch-edit">
-<h1>Batch edit<a class="headerlink" href="#batch-edit" title="Lien vers cette rubrique"></a></h1>
-<p>Media Text adds a section named <strong>Media Text</strong> to the batch edit form of items
-and media in the admin interface. It allows to remove and to extract textual
-representations of many resources at once.</p>
-<p>To use it, browse items or media, select resources (or choose to edit all
-resources), and choose <strong>Edit selected</strong> (or <strong>Edit all</strong>). The
-<a class="reference external" href="https://omeka.org/s/docs/user-manual/content/items/#batch-edit-items">batch edit</a>
-feature of Omeka S is available to editors, site administrators and global
-administrators.</p>
+<h1>Modification par lot<a class="headerlink" href="#batch-edit" title="Lien vers cette rubrique"></a></h1>
+<p>Media Text ajoute une section nommée <strong>Media Text</strong> au formulaire de modification par lot des contenus et des médias dans l’interface d’administration. Elle permet de supprimer et d’extraire les représentations textuelles de nombreuses ressources à la fois.</p>
+<p>Pour l’utiliser, parcourez les contenus ou les médias, sélectionnez des ressources (ou choisissez de modifier toutes les ressources), puis choisissez <strong>Modifier la sélection</strong> (ou <strong>Modifier tout</strong>). La fonctionnalité de <a class="reference external" href="https://omeka.org/s/docs/user-manual/content/items/#batch-edit-items">modification par lot</a> d’Omeka S est accessible aux éditeurs, aux administrateurs de site et aux administrateurs généraux.</p>
 <section id="options">
 <h2>Options<a class="headerlink" href="#options" title="Lien vers cette rubrique"></a></h2>
 <dl>
-<dt>Remove textual representation</dt><dd><ul class="simple">
-<li><p><em>Do not remove representations</em> (default)</p></li>
-<li><p><em>Remove all representations</em>: deletes all textual representations</p></li>
-<li><p><em>Remove automatically extracted representations only</em>: deletes only the
-representations created by an extractor (see
-<a class="reference internal" href="automated-extraction.html"><span class="doc">Automated text extraction</span></a>). Representations added manually are kept.</p></li>
+<dt>Supprimer la représentation textuelle</dt><dd><ul class="simple">
+<li><p><em>Ne pas supprimer les représentations</em> (par défaut)</p></li>
+<li><p><em>Supprimer toutes les représentations</em> : supprime toutes les représentations textuelles</p></li>
+<li><p><em>Supprimer uniquement les représentations extraites automatiquement</em> : supprime uniquement les représentations créées par un extracteur (voir <a class="reference internal" href="automated-extraction.html"><span class="doc">Extraction automatique du texte</span></a>). Les représentations ajoutées manuellement sont conservées.</p></li>
 </ul>
 </dd>
-<dt>Extract textual representation</dt><dd><p>A list of the available extractors (only extractors whose program is
-installed on the server are listed). Select one or more extractors to
-create new textual representations. An extractor is only applied to media
-whose file type it supports; other media are left unchanged.</p>
-<p>If no extractor is available, this field is not displayed.</p>
+<dt>Extraire une représentation textuelle</dt><dd><p>La liste des extracteurs disponibles (seuls les extracteurs dont le programme est installé sur le serveur sont listés). Sélectionnez un ou plusieurs extracteurs pour créer de nouvelles représentations textuelles. Un extracteur n’est appliqué qu’aux médias dont il prend en charge le type de fichier ; les autres médias restent inchangés.</p>
+<p>Si aucun extracteur n’est disponible, ce champ n’est pas affiché.</p>
 </dd>
 </dl>
-<p>When both options are used, removal is done first, then extraction. For
-instance, to re-run text extraction and replace previous results, select
-<em>Remove automatically extracted representations only</em> and the extractors to
-use.</p>
-<p>When editing items, the options are applied to all the media of each selected
-item.</p>
+<p>Lorsque les deux options sont utilisées, la suppression est effectuée en premier, puis l’extraction. Par exemple, pour relancer l’extraction du texte et remplacer les résultats précédents, sélectionnez <em>Supprimer uniquement les représentations extraites automatiquement</em> ainsi que les extracteurs à utiliser.</p>
+<p>Lors de la modification de contenus, les options sont appliquées à tous les médias de chaque contenu sélectionné.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Text extraction can take a long time. When using <strong>Edit all</strong>, Omeka S
-processes the batch edit in a background job: check its status in
-<strong>Jobs</strong> in the admin menu. When using <strong>Edit selected</strong>, prefer small
-selections to avoid timeouts.</p>
+<p>L’extraction du texte peut prendre beaucoup de temps. Avec <strong>Modifier tout</strong>, Omeka S traite la modification par lot dans une tâche en arrière-plan : vérifiez son état dans <strong>Tâches</strong> dans le menu d’administration. Avec <strong>Modifier la sélection</strong>, privilégiez de petites sélections pour éviter les dépassements de délai (<em>timeouts</em>).</p>
 </div>
 </section>
 </section>
@@ -136,8 +118,8 @@ selections to avoid timeouts.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
-        <a href="automated-extraction.html" class="btn btn-neutral float-left" title="Automated text extraction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
-        <a href="mediatext-search.html" class="btn btn-neutral float-right" title="Search" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="automated-extraction.html" class="btn btn-neutral float-left" title="Extraction automatique du texte" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="mediatext-search.html" class="btn btn-neutral float-right" title="Recherche" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

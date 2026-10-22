@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Public display &mdash; Documentation Media Text </title>
+  <title>Affichage public &mdash; Documentation Media Text </title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=e9c544c0" />
@@ -22,7 +22,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Configuration" href="configuration.html" />
-    <link rel="prev" title="Search" href="mediatext-search.html" /> 
+    <link rel="prev" title="Recherche" href="mediatext-search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,25 +44,25 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">User documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Documentation utilisateur</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="textual-representations.html">Textual representations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="managing-representations.html">Managing textual representations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automated-extraction.html">Automated text extraction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch-edit.html">Batch edit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mediatext-search.html">Search</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Public display</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#resource-page-block">Resource page block</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#styling">Styling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Prérequis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textual-representations.html">Représentations textuelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing-representations.html">Gérer les représentations textuelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automated-extraction.html">Extraction automatique du texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch-edit.html">Modification par lot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mediatext-search.html">Recherche</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Affichage public</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#resource-page-block">Bloc de page de ressource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#styling">Mise en forme</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Developer documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation développeur</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="developer/rest-api.html">REST API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="developer/extending.html">Extending Media Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer/rest-api.html">API REST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer/extending.html">Étendre Media Text</a></li>
 </ul>
 
         </div>
@@ -79,7 +79,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Public display</li>
+      <li class="breadcrumb-item active">Affichage public</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/public-display.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
@@ -90,31 +90,23 @@
            <div itemprop="articleBody">
              
   <section id="public-display">
-<h1>Public display<a class="headerlink" href="#public-display" title="Lien vers cette rubrique"></a></h1>
-<p>Textual representations can be displayed on the public media pages of a site
-using a resource page block.</p>
+<h1>Affichage public<a class="headerlink" href="#public-display" title="Lien vers cette rubrique"></a></h1>
+<p>Les représentations textuelles peuvent être affichées sur les pages publiques des médias d’un site à l’aide d’un bloc de page de ressource.</p>
 <section id="resource-page-block">
-<h2>Resource page block<a class="headerlink" href="#resource-page-block" title="Lien vers cette rubrique"></a></h2>
-<p>Media Text provides a resource page block named <strong>Textual representations as
-plain text</strong>, compatible with media pages.</p>
-<p>To add it:</p>
+<h2>Bloc de page de ressource<a class="headerlink" href="#resource-page-block" title="Lien vers cette rubrique"></a></h2>
+<p>Media Text fournit un bloc de page de ressource nommé <strong>Représentations textuelles en texte brut</strong>, compatible avec les pages de médias.</p>
+<p>Pour l’ajouter :</p>
 <ol class="arabic simple">
-<li><p>In the admin interface, edit the site, and go to <strong>Theme</strong> (or <strong>Resource
-pages</strong>, depending on the theme and the Omeka S version).</p></li>
-<li><p>In the media page configuration, add the <strong>Textual representations as plain
-text</strong> block to a region.</p></li>
-<li><p>Save.</p></li>
+<li><p>Dans l’interface d’administration, modifiez le site, et allez dans <strong>Thème</strong> (ou <strong>Pages de ressource</strong>, selon le thème et la version d’Omeka S).</p></li>
+<li><p>Dans la configuration de la page des médias, ajoutez le bloc <strong>Représentations textuelles en texte brut</strong> à une région.</p></li>
+<li><p>Enregistrez.</p></li>
 </ol>
-<p>See <a class="reference external" href="https://omeka.org/s/docs/user-manual/sites/site_theme/#configure-resource-pages">Configure resource pages</a>
-in the Omeka S user manual.</p>
-<p>The block displays, for each textual representation of the media visible to
-the visitor (see <a class="reference internal" href="textual-representations.html#visibility"><span class="std std-ref">Visibility</span></a>), its title and its content converted to
-plain text (see <a class="reference internal" href="textual-representations.html#formats"><span class="std std-ref">Formats</span></a>). Nothing is displayed if the media has no
-visible textual representation.</p>
+<p>Voir <a class="reference external" href="https://omeka.org/s/docs/user-manual/sites/site_theme/#configure-resource-pages">Configurer les pages de ressource</a> dans le manuel utilisateur d’Omeka S (en anglais).</p>
+<p>Le bloc affiche, pour chaque représentation textuelle du média visible par le visiteur (voir <a class="reference internal" href="textual-representations.html#visibility"><span class="std std-ref">Visibilité</span></a>), son titre et son contenu converti en texte brut (voir <a class="reference internal" href="textual-representations.html#formats"><span class="std std-ref">Formats</span></a>). Rien n’est affiché si le média n’a aucune représentation textuelle visible.</p>
 </section>
 <section id="styling">
-<h2>Styling<a class="headerlink" href="#styling" title="Lien vers cette rubrique"></a></h2>
-<p>The block is rendered as an HTML definition list:</p>
+<h2>Mise en forme<a class="headerlink" href="#styling" title="Lien vers cette rubrique"></a></h2>
+<p>Le bloc est rendu sous forme de liste de définitions HTML :</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">dl</span> <span class="na">class</span><span class="o">=</span><span class="s">"mediatext-text"</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"property"</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>Title of the representation<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
@@ -124,8 +116,7 @@ visible textual representation.</p>
 <span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p>The module stylesheet (<code class="docutils literal notranslate"><span class="pre">asset/css/mediatext-site.css</span></code>) preserves line breaks
-of the text. It can be overridden in the theme.</p>
+<p>La feuille de style du module (<code class="docutils literal notranslate"><span class="pre">asset/css/mediatext-site.css</span></code>) préserve les retours à la ligne du texte. Elle peut être surchargée dans le thème.</p>
 </section>
 </section>
 
@@ -133,7 +124,7 @@ of the text. It can be overridden in the theme.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
-        <a href="mediatext-search.html" class="btn btn-neutral float-left" title="Search" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="mediatext-search.html" class="btn btn-neutral float-left" title="Recherche" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
         <a href="configuration.html" class="btn btn-neutral float-right" title="Configuration" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

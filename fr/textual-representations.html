@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Textual representations &mdash; Documentation Media Text </title>
+  <title>Représentations textuelles &mdash; Documentation Media Text </title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=e9c544c0" />
@@ -21,8 +21,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Managing textual representations" href="managing-representations.html" />
-    <link rel="prev" title="Requirements" href="requirements.html" /> 
+    <link rel="next" title="Gérer les représentations textuelles" href="managing-representations.html" />
+    <link rel="prev" title="Prérequis" href="requirements.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,31 +44,31 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">User documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Documentation utilisateur</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Textual representations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Prérequis</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Représentations textuelles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#properties">Propriétés</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#formats">Formats</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#plain-text">Plain text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plain-text">Texte brut</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#alto">ALTO</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#visibility">Visibility</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#storage">Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#visibility">Visibilité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#storage">Stockage</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="managing-representations.html">Managing textual representations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automated-extraction.html">Automated text extraction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch-edit.html">Batch edit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mediatext-search.html">Search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="public-display.html">Public display</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing-representations.html">Gérer les représentations textuelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automated-extraction.html">Extraction automatique du texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch-edit.html">Modification par lot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mediatext-search.html">Recherche</a></li>
+<li class="toctree-l1"><a class="reference internal" href="public-display.html">Affichage public</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Developer documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation développeur</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="developer/rest-api.html">REST API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="developer/extending.html">Extending Media Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer/rest-api.html">API REST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer/extending.html">Étendre Media Text</a></li>
 </ul>
 
         </div>
@@ -85,7 +85,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Textual representations</li>
+      <li class="breadcrumb-item active">Représentations textuelles</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/textual-representations.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
@@ -96,96 +96,75 @@
            <div itemprop="articleBody">
              
   <section id="textual-representations">
-<h1>Textual representations<a class="headerlink" href="#textual-representations" title="Lien vers cette rubrique"></a></h1>
-<p>A textual representation is a resource attached to a media. It describes the
-text contained in the media (whether the media is an image, a PDF, a video, a
-sound, or anything else).</p>
-<p>It is mostly useful to store transcriptions of a media, but it can be useful to
-store translations or transliterations.</p>
-<p>Textual representations can be stored as plain text or <a class="reference external" href="https://www.loc.gov/standards/alto/">ALTO</a>.</p>
-<p>A media can have several textual representations.</p>
+<h1>Représentations textuelles<a class="headerlink" href="#textual-representations" title="Lien vers cette rubrique"></a></h1>
+<p>Une représentation textuelle est une ressource rattachée à un média. Elle décrit le texte contenu dans le média (qu’il s’agisse d’une image, d’un PDF, d’une vidéo, d’un son ou de toute autre chose).</p>
+<p>Elle sert principalement à stocker les transcriptions d’un média, mais peut aussi servir à stocker des traductions ou des translittérations.</p>
+<p>Les représentations textuelles peuvent être stockées en texte brut ou en <a class="reference external" href="https://www.loc.gov/standards/alto/">ALTO</a>.</p>
+<p>Un média peut avoir plusieurs représentations textuelles.</p>
 <section id="properties">
-<h2>Properties<a class="headerlink" href="#properties" title="Lien vers cette rubrique"></a></h2>
-<p>Each textual representation has the following properties:</p>
+<h2>Propriétés<a class="headerlink" href="#properties" title="Lien vers cette rubrique"></a></h2>
+<p>Chaque représentation textuelle possède les propriétés suivantes :</p>
 <dl class="simple">
-<dt>Title</dt><dd><p>A free-form title (required). Automatically extracted representationsare
-titled « Extracted by &lt;extractor&gt; » (for instance « Extracted by pdftotext »).</p>
+<dt>Titre</dt><dd><p>Un titre libre (obligatoire). Les représentations extraites automatiquement sont intitulées « Extrait par &lt;extracteur&gt; » (par exemple « Extrait par pdftotext »).</p>
 </dd>
-<dt>Type</dt><dd><p>One of <em>Transcription</em>, <em>Transliteration</em>, <em>Translation</em> or <em>Other</em>.</p>
+<dt>Type</dt><dd><p><em>Transcription</em>, <em>Translittération</em>, <em>Traduction</em> ou <em>Autre</em>.</p>
 </dd>
-<dt>Format</dt><dd><p>The format of the content: <em>Plain text</em> or <em>ALTO</em>. See <a class="reference internal" href="#formats">Formats</a>.</p>
+<dt>Format</dt><dd><p>Le format du contenu : <em>Texte brut</em> ou <em>ALTO</em>. Voir <a class="reference internal" href="#formats">Formats</a>.</p>
 </dd>
-<dt>Content</dt><dd><p>The text itself.</p>
+<dt>Contenu</dt><dd><p>Le texte lui-même.</p>
 </dd>
-<dt>Visibility</dt><dd><p>Public or private. See <a class="reference internal" href="#visibility">Visibility</a>.</p>
+<dt>Visibilité</dt><dd><p>Public ou privé. Voir <a class="reference internal" href="#visibility"><span class="std std-ref">Visibilité</span></a>.</p>
 </dd>
-<dt>Source</dt><dd><p>Where the content comes from. It is set automatically to the name of the
-uploaded file when using the <em>Upload</em> method, or to the source of the media
-when the representation is automatically extracted.</p>
+<dt>Source</dt><dd><p>La provenance du contenu. Elle est définie automatiquement avec le nom du fichier chargé lors de l’utilisation de la méthode <em>Charger</em>, ou avec la source du média lorsque la représentation est extraite automatiquement.</p>
 </dd>
-<dt>Automatically extracted</dt><dd><p>Whether the representation was created by an extractor (see
-<a class="reference internal" href="automated-extraction.html"><span class="doc">Automated text extraction</span></a>). This allows to remove only the extracted
-representations in batch (see <a class="reference internal" href="batch-edit.html"><span class="doc">Batch edit</span></a>).</p>
+<dt>Extraite automatiquement</dt><dd><p>Indique si la représentation a été créée par un extracteur (voir <a class="reference internal" href="automated-extraction.html"><span class="doc">Extraction automatique du texte</span></a>). Cela permet de supprimer par lot uniquement les représentations extraites (voir <a class="reference internal" href="batch-edit.html"><span class="doc">Modification par lot</span></a>).</p>
 </dd>
-<dt>Position</dt><dd><p>The order of the representation among the representations of the media.</p>
+<dt>Position</dt><dd><p>L’ordre de la représentation parmi les représentations du média.</p>
 </dd>
-<dt>Created / Modified</dt><dd><p>Date of creation and date of last modification.</p>
+<dt>Créée / Modifiée</dt><dd><p>Date de création et date de dernière modification.</p>
 </dd>
 </dl>
 </section>
 <section id="formats">
 <span id="id1"></span><h2>Formats<a class="headerlink" href="#formats" title="Lien vers cette rubrique"></a></h2>
 <section id="plain-text">
-<h3>Plain text<a class="headerlink" href="#plain-text" title="Lien vers cette rubrique"></a></h3>
-<p>Any text is accepted. The content is stored and displayed as is.</p>
+<h3>Texte brut<a class="headerlink" href="#plain-text" title="Lien vers cette rubrique"></a></h3>
+<p>Tout texte est accepté. Le contenu est stocké et affiché tel quel.</p>
 </section>
 <section id="alto">
 <h3>ALTO<a class="headerlink" href="#alto" title="Lien vers cette rubrique"></a></h3>
-<p><a class="reference external" href="https://www.loc.gov/standards/alto/">ALTO</a> (Analyzed Layout and Text
-Object) is an XML format commonly produced by OCR software. It contains the
-text and its position on the page.</p>
-<p>When an ALTO representation is saved, the module checks that:</p>
+<p><a class="reference external" href="https://www.loc.gov/standards/alto/">ALTO</a> (<em>Analyzed Layout and Text Object</em>) est un format XML couramment produit par les logiciels d’OCR. Il contient le texte et sa position sur la page.</p>
+<p>Lors de l’enregistrement d’une représentation ALTO, le module vérifie que :</p>
 <ul class="simple">
-<li><p>the content is not empty,</p></li>
-<li><p>the content is well-formed XML,</p></li>
-<li><p>the root element is <code class="docutils literal notranslate"><span class="pre">alto</span></code>,</p></li>
-<li><p>the root element has a namespace (any ALTO version is accepted).</p></li>
+<li><p>le contenu n’est pas vide,</p></li>
+<li><p>le contenu est un XML bien formé,</p></li>
+<li><p>l’élément racine est <code class="docutils literal notranslate"><span class="pre">alto</span></code>,</p></li>
+<li><p>l’élément racine possède un espace de noms (toutes les versions d’ALTO sont acceptées).</p></li>
 </ul>
-<p>If one of these checks fails, the representation is not saved and an error is
-displayed.</p>
-<p>The module is able to convert ALTO to plain text. This plain text version is
-used for display on public pages (see <a class="reference internal" href="public-display.html"><span class="doc">Public display</span></a>) and for indexing
-(see <a class="reference internal" href="mediatext-search.html"><span class="doc">Search</span></a>). It is built as follows:</p>
+<p>Si l’une de ces vérifications échoue, la représentation n’est pas enregistrée et une erreur est affichée.</p>
+<p>Le module est capable de convertir l’ALTO en texte brut. Cette version en texte brut est utilisée pour l’affichage sur les pages publiques (voir <a class="reference internal" href="public-display.html"><span class="doc">Affichage public</span></a>) et pour l’indexation (voir <a class="reference internal" href="mediatext-search.html"><span class="doc">Recherche</span></a>). Elle est construite comme suit :</p>
 <ul class="simple">
-<li><p>each <code class="docutils literal notranslate"><span class="pre">String</span></code> element of a <code class="docutils literal notranslate"><span class="pre">TextLine</span></code> is replaced by its <code class="docutils literal notranslate"><span class="pre">CONTENT</span></code>
-attribute, separated by spaces,</p></li>
-<li><p>each <code class="docutils literal notranslate"><span class="pre">TextLine</span></code> is put on its own line,</p></li>
-<li><p>each <code class="docutils literal notranslate"><span class="pre">TextBlock</span></code> is separated from the next one by an empty line.</p></li>
+<li><p>chaque élément <code class="docutils literal notranslate"><span class="pre">String</span></code> d’une <code class="docutils literal notranslate"><span class="pre">TextLine</span></code> est remplacé par son attribut <code class="docutils literal notranslate"><span class="pre">CONTENT</span></code>, les éléments étant séparés par des espaces,</p></li>
+<li><p>chaque <code class="docutils literal notranslate"><span class="pre">TextLine</span></code> est placée sur sa propre ligne,</p></li>
+<li><p>chaque <code class="docutils literal notranslate"><span class="pre">TextBlock</span></code> est séparé du suivant par une ligne vide.</p></li>
 </ul>
 </section>
 </section>
 <section id="visibility">
-<span id="id2"></span><h2>Visibility<a class="headerlink" href="#visibility" title="Lien vers cette rubrique"></a></h2>
-<p>Each textual representation can be either public or private. New
-representations are public by default.</p>
-<p>A textual representation is visible:</p>
+<span id="id2"></span><h2>Visibilité<a class="headerlink" href="#visibility" title="Lien vers cette rubrique"></a></h2>
+<p>Chaque représentation textuelle peut être publique ou privée. Les nouvelles représentations sont publiques par défaut.</p>
+<p>Une représentation textuelle est visible :</p>
 <ul class="simple">
-<li><p>to users who can view all resources (global administrators, site
-administrators, editors and reviewers), whatever its visibility,</p></li>
-<li><p>to the owner of the media it is attached to, whatever its visibility,</p></li>
-<li><p>to everybody else (including anonymous visitors), if it is public <strong>and</strong> if
-the media it is attached to is visible to them.</p></li>
+<li><p>par les utilisateurs qui peuvent voir toutes les ressources (administrateurs généraux, administrateurs de site, éditeurs et relecteurs), quelle que soit sa visibilité,</p></li>
+<li><p>par le propriétaire du média auquel elle est rattachée, quelle que soit sa visibilité,</p></li>
+<li><p>par toute autre personne (y compris les visiteurs anonymes), si elle est publique <strong>et</strong> si le média auquel elle est rattachée leur est visible.</p></li>
 </ul>
-<p>In other words, a public representation of a private media is not visible to
-the public.</p>
+<p>Autrement dit, une représentation publique d’un média privé n’est pas visible par le public.</p>
 </section>
 <section id="storage">
-<h2>Storage<a class="headerlink" href="#storage" title="Lien vers cette rubrique"></a></h2>
-<p>The content of textual representations is compressed in the database using
-zlib (gzip format) to save disk space. The compression level can be configured
-(see <a class="reference internal" href="configuration.html"><span class="doc">Configuration</span></a>).</p>
-<p>Representations are attached to a media: when a media is deleted, all its
-textual representations are deleted too.</p>
+<h2>Stockage<a class="headerlink" href="#storage" title="Lien vers cette rubrique"></a></h2>
+<p>Le contenu des représentations textuelles est compressé dans la base de données avec zlib (format gzip) pour économiser l’espace disque. Le niveau de compression est configurable (voir <a class="reference internal" href="configuration.html"><span class="doc">Configuration</span></a>).</p>
+<p>Les représentations sont rattachées à un média : lorsqu’un média est supprimé, toutes ses représentations textuelles sont également supprimées.</p>
 </section>
 </section>
 
@@ -193,8 +172,8 @@ textual representations are deleted too.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
-        <a href="requirements.html" class="btn btn-neutral float-left" title="Requirements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
-        <a href="managing-representations.html" class="btn btn-neutral float-right" title="Managing textual representations" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="requirements.html" class="btn btn-neutral float-left" title="Prérequis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="managing-representations.html" class="btn btn-neutral float-right" title="Gérer les représentations textuelles" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

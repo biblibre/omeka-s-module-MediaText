@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Search &mdash; Documentation Media Text </title>
+  <title>Recherche &mdash; Documentation Media Text </title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=e9c544c0" />
@@ -21,8 +21,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Public display" href="public-display.html" />
-    <link rel="prev" title="Batch edit" href="batch-edit.html" /> 
+    <link rel="next" title="Affichage public" href="public-display.html" />
+    <link rel="prev" title="Modification par lot" href="batch-edit.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,25 +44,25 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">User documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Documentation utilisateur</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="textual-representations.html">Textual representations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="managing-representations.html">Managing textual representations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automated-extraction.html">Automated text extraction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="batch-edit.html">Batch edit</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Search</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#admin-advanced-search">Admin advanced search</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#full-text-search-with-solr">Full-text search with Solr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Prérequis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textual-representations.html">Représentations textuelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing-representations.html">Gérer les représentations textuelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automated-extraction.html">Extraction automatique du texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch-edit.html">Modification par lot</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Recherche</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#admin-advanced-search">Recherche avancée (administration)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#full-text-search-with-solr">Recherche plein texte avec Solr</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="public-display.html">Public display</a></li>
+<li class="toctree-l1"><a class="reference internal" href="public-display.html">Affichage public</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Developer documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation développeur</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="developer/rest-api.html">REST API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="developer/extending.html">Extending Media Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer/rest-api.html">API REST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer/extending.html">Étendre Media Text</a></li>
 </ul>
 
         </div>
@@ -79,7 +79,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Search</li>
+      <li class="breadcrumb-item active">Recherche</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/mediatext-search.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
@@ -90,50 +90,33 @@
            <div itemprop="articleBody">
              
   <section id="search">
-<h1>Search<a class="headerlink" href="#search" title="Lien vers cette rubrique"></a></h1>
+<h1>Recherche<a class="headerlink" href="#search" title="Lien vers cette rubrique"></a></h1>
 <section id="admin-advanced-search">
-<h2>Admin advanced search<a class="headerlink" href="#admin-advanced-search" title="Lien vers cette rubrique"></a></h2>
-<p>Media Text adds a field named <strong>Search by textual representations presence</strong>
-to the advanced search form of items and media in the admin interface. It has
-the following options:</p>
+<h2>Recherche avancée (administration)<a class="headerlink" href="#admin-advanced-search" title="Lien vers cette rubrique"></a></h2>
+<p>Media Text ajoute un champ nommé <strong>Recherche par présence de représentations textuelles</strong> au formulaire de recherche avancée des contenus et des médias dans l’interface d’administration. Il propose les options suivantes :</p>
 <ul class="simple">
-<li><p><em>Has textual representations</em>: only returns items (or media) that have at
-least one textual representation (for items: at least one media of the item
-has a textual representation),</p></li>
-<li><p><em>Has no textual representations</em>: only returns items (or media) without any
-textual representation.</p></li>
+<li><p><em>A des représentations textuelles</em> : ne retourne que les contenus (ou médias) qui ont au moins une représentation textuelle (pour les contenus : au moins un média du contenu a une représentation textuelle),</p></li>
+<li><p><em>N’a pas de représentations textuelles</em> : ne retourne que les contenus (ou médias) sans aucune représentation textuelle.</p></li>
 </ul>
 </section>
 <section id="full-text-search-with-solr">
-<h2>Full-text search with Solr<a class="headerlink" href="#full-text-search-with-solr" title="Lien vers cette rubrique"></a></h2>
-<p>When the <a class="reference external" href="https://github.com/biblibre/omeka-s-module-Solr">Solr</a> module
-(and the <a class="reference external" href="https://github.com/biblibre/omeka-s-module-Search">Search</a> module
-it depends on) is installed, the content of textual representations can be indexed, making it
-searchable.</p>
-<p>Media Text adds a new source field to the Solr module, under <strong>Media</strong>, named
-<strong>Media text representation content (plain text)</strong>. It contains the content of
-all the textual representations of all the media of an item, converted to
-plain text (see <a class="reference internal" href="textual-representations.html#formats"><span class="std std-ref">Formats</span></a>).</p>
-<p>To use it:</p>
+<h2>Recherche plein texte avec Solr<a class="headerlink" href="#full-text-search-with-solr" title="Lien vers cette rubrique"></a></h2>
+<p>Lorsque le module <a class="reference external" href="https://github.com/biblibre/omeka-s-module-Solr">Solr</a> (et le module <a class="reference external" href="https://github.com/biblibre/omeka-s-module-Search">Search</a> dont il dépend) est installé, le contenu des représentations textuelles peut être indexé, ce qui le rend interrogeable.</p>
+<p>Media Text ajoute un nouveau champ source au module Solr, sous <strong>Médias</strong>, nommé <strong>Contenu des représentations Media Text (texte brut)</strong>. Il contient le contenu de toutes les représentations textuelles de tous les médias d’un contenu, converti en texte brut (voir <a class="reference internal" href="textual-representations.html#formats"><span class="std std-ref">Formats</span></a>).</p>
+<p>Pour l’utiliser :</p>
 <ol class="arabic simple">
-<li><p>Go to the Solr module configuration, and edit the mappings of the Solr
-index for items.</p></li>
-<li><p>Add a new mapping using the source <strong>Media › Media text representation
-content (plain text)</strong>, and choose a Solr field suitable for full text (for
-instance a <code class="docutils literal notranslate"><span class="pre">*_txt</span></code> field).</p></li>
-<li><p>Reindex the items.</p></li>
+<li><p>Allez dans la configuration du module Solr, et modifiez les correspondances (<em>mappings</em>) de l’index Solr pour les contenus.</p></li>
+<li><p>Ajoutez une nouvelle correspondance utilisant la source <strong>Médias › Contenu des représentations Media Text (texte brut)</strong>, et choisissez un champ Solr adapté au plein texte (par exemple un champ <code class="docutils literal notranslate"><span class="pre">*_txt</span></code>).</p></li>
+<li><p>Réindexez les contenus.</p></li>
 </ol>
-<p>See the documentation of the Solr module for more details.</p>
+<p>Voir la documentation du module Solr pour plus de détails.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Only items are supported. Textual representations are not added to
-indexed media.</p>
+<p>Seuls les contenus sont pris en charge. Les représentations textuelles ne sont pas ajoutées aux médias indexés.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Editing a textual representation from its own edit page does not modify
-the media nor the item, so the change is not detected by the Search
-module. Save the item (or rebuild the index) to update the indexed text.</p>
+<p>Modifier une représentation textuelle depuis sa propre page de modification ne modifie ni le média ni le contenu : le changement n’est donc pas détecté par le module Search. Enregistrez le contenu (ou reconstruisez l’index) pour mettre à jour le texte indexé.</p>
 </div>
 </section>
 </section>
@@ -142,8 +125,8 @@ module. Save the item (or rebuild the index) to update the indexed text.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
-        <a href="batch-edit.html" class="btn btn-neutral float-left" title="Batch edit" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
-        <a href="public-display.html" class="btn btn-neutral float-right" title="Public display" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="batch-edit.html" class="btn btn-neutral float-left" title="Modification par lot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="public-display.html" class="btn btn-neutral float-right" title="Affichage public" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

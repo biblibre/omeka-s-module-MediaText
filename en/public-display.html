@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Public display &mdash; Media Text  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=e9c544c0" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Configuration" href="configuration.html" />
+    <link rel="prev" title="Search" href="mediatext-search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Media Text
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textual-representations.html">Textual representations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing-representations.html">Managing textual representations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automated-extraction.html">Automated text extraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch-edit.html">Batch edit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mediatext-search.html">Search</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Public display</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#resource-page-block">Resource page block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#styling">Styling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developer/rest-api.html">REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer/extending.html">Extending Media Text</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Media Text</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Public display</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/public-display.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="public-display">
+<h1>Public display<a class="headerlink" href="#public-display" title="Link to this heading"></a></h1>
+<p>Textual representations can be displayed on the public media pages of a site
+using a resource page block.</p>
+<section id="resource-page-block">
+<h2>Resource page block<a class="headerlink" href="#resource-page-block" title="Link to this heading"></a></h2>
+<p>Media Text provides a resource page block named <strong>Textual representations as
+plain text</strong>, compatible with media pages.</p>
+<p>To add it:</p>
+<ol class="arabic simple">
+<li><p>In the admin interface, edit the site, and go to <strong>Theme</strong> (or <strong>Resource
+pages</strong>, depending on the theme and the Omeka S version).</p></li>
+<li><p>In the media page configuration, add the <strong>Textual representations as plain
+text</strong> block to a region.</p></li>
+<li><p>Save.</p></li>
+</ol>
+<p>See <a class="reference external" href="https://omeka.org/s/docs/user-manual/sites/site_theme/#configure-resource-pages">Configure resource pages</a>
+in the Omeka S user manual.</p>
+<p>The block displays, for each textual representation of the media visible to
+the visitor (see <a class="reference internal" href="textual-representations.html#visibility"><span class="std std-ref">Visibility</span></a>), its title and its content converted to
+plain text (see <a class="reference internal" href="textual-representations.html#formats"><span class="std std-ref">Formats</span></a>). Nothing is displayed if the media has no
+visible textual representation.</p>
+</section>
+<section id="styling">
+<h2>Styling<a class="headerlink" href="#styling" title="Link to this heading"></a></h2>
+<p>The block is rendered as an HTML definition list:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">dl</span> <span class="na">class</span><span class="o">=</span><span class="s">"mediatext-text"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"property"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>Title of the representation<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">dd</span> <span class="na">class</span><span class="o">=</span><span class="s">"value"</span><span class="p">&gt;</span>Content as plain text<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    ...
+<span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>The module stylesheet (<code class="docutils literal notranslate"><span class="pre">asset/css/mediatext-site.css</span></code>) preserves line breaks
+of the text. It can be overridden in the theme.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mediatext-search.html" class="btn btn-neutral float-left" title="Search" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="configuration.html" class="btn btn-neutral float-right" title="Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, BibLibre.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

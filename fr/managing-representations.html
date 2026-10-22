@@ -1,0 +1,240 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Managing textual representations &mdash; Documentation Media Text </title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=e9c544c0" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=d1a510d7"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=e6b791cb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Automated text extraction" href="automated-extraction.html" />
+    <link rel="prev" title="Textual representations" href="textual-representations.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Media Text
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textual-representations.html">Textual representations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Managing textual representations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#viewing-the-textual-representations-of-a-media">Viewing the textual representations of a media</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#representation-page">Representation page</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-textual-representations">Adding textual representations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extracting-textual-representations">Extracting textual representations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reordering-textual-representations">Reordering textual representations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#changing-the-visibility">Changing the visibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#editing-a-textual-representation">Editing a textual representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deleting-textual-representations">Deleting textual representations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#permissions">Permissions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="automated-extraction.html">Automated text extraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch-edit.html">Batch edit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mediatext-search.html">Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="public-display.html">Public display</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developer/rest-api.html">REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer/extending.html">Extending Media Text</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Media Text</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Managing textual representations</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/managing-representations.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="managing-textual-representations">
+<h1>Managing textual representations<a class="headerlink" href="#managing-textual-representations" title="Lien vers cette rubrique"></a></h1>
+<p>Textual representations are managed from the media pages of the admin
+interface.</p>
+<section id="viewing-the-textual-representations-of-a-media">
+<h2>Viewing the textual representations of a media<a class="headerlink" href="#viewing-the-textual-representations-of-a-media" title="Lien vers cette rubrique"></a></h2>
+<p>On the page of a media, a tab named <strong>Textual representations</strong> lists all the
+textual representations of the media, in order. For each representation, the
+list shows:</p>
+<ul class="simple">
+<li><p>its title, linked to the representation page,</p></li>
+<li><p>its type and its format,</p></li>
+<li><p>the mention « Automatically extracted » if it was created by an extractor,</p></li>
+<li><p>a « private » icon if it is private.</p></li>
+</ul>
+<p>Two actions are available for each representation:</p>
+<ul class="simple">
+<li><p><strong>Edit</strong> opens the representation edit page,</p></li>
+<li><p><strong>Details</strong> opens a sidebar with the ID, type, format, source and content of
+the representation.</p></li>
+</ul>
+<section id="representation-page">
+<h3>Representation page<a class="headerlink" href="#representation-page" title="Lien vers cette rubrique"></a></h3>
+<p>The representation page shows the ID, type, format and source of the
+representation, along with its content. The content is displayed twice, side by
+side: as stored (for instance ALTO XML), and converted to plain text. This
+allows to check what will be displayed on public pages and indexed by search
+engines.</p>
+</section>
+</section>
+<section id="adding-textual-representations">
+<h2>Adding textual representations<a class="headerlink" href="#adding-textual-representations" title="Lien vers cette rubrique"></a></h2>
+<ol class="arabic simple">
+<li><p>Edit the media, and click on the <strong>Textual representations</strong> tab.</p></li>
+<li><p>In the sidebar on the right, under <strong>Import textual representation</strong>, click
+on one of the following buttons:</p>
+<ul class="simple">
+<li><p><strong>Text area</strong>: type or paste the content directly in a text field,</p></li>
+<li><p><strong>Upload</strong>: upload a file containing the content.</p></li>
+</ul>
+</li>
+<li><p>Fill in the form that appears:</p>
+<ul class="simple">
+<li><p><strong>Title</strong> (required),</p></li>
+<li><p><strong>Type</strong> (required): Transcription, Transliteration, Translation or
+Other,</p></li>
+<li><p><strong>Format</strong> (required): Plain text or ALTO,</p></li>
+<li><p><strong>Content</strong> or <strong>Upload file</strong> depending on the chosen method.</p></li>
+</ul>
+</li>
+<li><p>Click on <strong>Save</strong>.</p></li>
+</ol>
+<p>Several representations can be added at once by clicking several times on the
+buttons. A new representation that has not been saved yet can be removed with
+its <strong>Remove representation</strong> icon.</p>
+<p>When using <strong>Upload</strong>, the content of the file is copied in the database (the
+file itself is not kept) and the file name is stored as the source of the
+representation.</p>
+<p>The content is validated according to its format before being saved (see
+<a class="reference internal" href="textual-representations.html#formats"><span class="std std-ref">Formats</span></a>). If the validation fails, an error
+message is displayed and the media is not saved.</p>
+</section>
+<section id="extracting-textual-representations">
+<h2>Extracting textual representations<a class="headerlink" href="#extracting-textual-representations" title="Lien vers cette rubrique"></a></h2>
+<p>The same sidebar contains a section named <strong>Extract textual representation
+from media</strong>. It lists the extractors that are able to handle the media file.
+Check one or more extractors and click on <strong>Save</strong> to create new textual
+representations from the media file.</p>
+<p>See <a class="reference internal" href="automated-extraction.html"><span class="doc">Automated text extraction</span></a> for more details.</p>
+</section>
+<section id="reordering-textual-representations">
+<h2>Reordering textual representations<a class="headerlink" href="#reordering-textual-representations" title="Lien vers cette rubrique"></a></h2>
+<p>On the media edit page, drag and drop representations using their handle, then
+click on <strong>Save</strong>. The order is used in the admin interface.</p>
+</section>
+<section id="changing-the-visibility">
+<h2>Changing the visibility<a class="headerlink" href="#changing-the-visibility" title="Lien vers cette rubrique"></a></h2>
+<p>On the media edit page, click on the visibility icon (<strong>Make private</strong> /
+<strong>Make public</strong>) of a representation, then click on <strong>Save</strong>. See
+<a class="reference internal" href="textual-representations.html#visibility"><span class="std std-ref">Visibility</span></a>.</p>
+</section>
+<section id="editing-a-textual-representation">
+<h2>Editing a textual representation<a class="headerlink" href="#editing-a-textual-representation" title="Lien vers cette rubrique"></a></h2>
+<p>Click on the <strong>Edit</strong> icon of a representation (from the media page, the media
+edit page or the representation page). The edit form allows to change the
+title, the type, the format and the content of the representation.</p>
+<p>The content is validated according to the selected format before being saved.</p>
+</section>
+<section id="deleting-textual-representations">
+<h2>Deleting textual representations<a class="headerlink" href="#deleting-textual-representations" title="Lien vers cette rubrique"></a></h2>
+<p>On the media edit page, click on the <strong>Delete</strong> icon of a representation. The
+representation is marked for removal, and can be restored with the <strong>Restore</strong>
+icon until the media is saved. It is deleted when clicking on <strong>Save</strong>.</p>
+<p>To delete textual representations of many media at once, see
+<a class="reference internal" href="batch-edit.html"><span class="doc">Batch edit</span></a>.</p>
+</section>
+<section id="permissions">
+<h2>Permissions<a class="headerlink" href="#permissions" title="Lien vers cette rubrique"></a></h2>
+<ul class="simple">
+<li><p>Everybody can view textual representations, according to their visibility
+(see <a class="reference internal" href="textual-representations.html#visibility"><span class="std std-ref">Visibility</span></a>).</p></li>
+<li><p>Authors, reviewers, editors, site administrators and global administrators
+can create, edit and delete textual representations. Note that, as for any
+other change on a media, they need to be allowed to edit the media.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="textual-representations.html" class="btn btn-neutral float-left" title="Textual representations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="automated-extraction.html" class="btn btn-neutral float-right" title="Automated text extraction" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2023, BibLibre.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

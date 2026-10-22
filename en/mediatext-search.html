@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search &mdash; Media Text  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=e9c544c0" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Public display" href="public-display.html" />
+    <link rel="prev" title="Batch edit" href="batch-edit.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Media Text
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textual-representations.html">Textual representations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing-representations.html">Managing textual representations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automated-extraction.html">Automated text extraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch-edit.html">Batch edit</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Search</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#admin-advanced-search">Admin advanced search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#full-text-search-with-solr">Full-text search with Solr</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="public-display.html">Public display</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developer/rest-api.html">REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer/extending.html">Extending Media Text</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Media Text</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Search</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/mediatext-search.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="search">
+<h1>Search<a class="headerlink" href="#search" title="Link to this heading"></a></h1>
+<section id="admin-advanced-search">
+<h2>Admin advanced search<a class="headerlink" href="#admin-advanced-search" title="Link to this heading"></a></h2>
+<p>Media Text adds a field named <strong>Search by textual representations presence</strong>
+to the advanced search form of items and media in the admin interface. It has
+the following options:</p>
+<ul class="simple">
+<li><p><em>Has textual representations</em>: only returns items (or media) that have at
+least one textual representation (for items: at least one media of the item
+has a textual representation),</p></li>
+<li><p><em>Has no textual representations</em>: only returns items (or media) without any
+textual representation.</p></li>
+</ul>
+</section>
+<section id="full-text-search-with-solr">
+<h2>Full-text search with Solr<a class="headerlink" href="#full-text-search-with-solr" title="Link to this heading"></a></h2>
+<p>When the <a class="reference external" href="https://github.com/biblibre/omeka-s-module-Solr">Solr</a> module
+(and the <a class="reference external" href="https://github.com/biblibre/omeka-s-module-Search">Search</a> module
+it depends on) is installed, the content of textual representations can be indexed, making it
+searchable.</p>
+<p>Media Text adds a new source field to the Solr module, under <strong>Media</strong>, named
+<strong>Media text representation content (plain text)</strong>. It contains the content of
+all the textual representations of all the media of an item, converted to
+plain text (see <a class="reference internal" href="textual-representations.html#formats"><span class="std std-ref">Formats</span></a>).</p>
+<p>To use it:</p>
+<ol class="arabic simple">
+<li><p>Go to the Solr module configuration, and edit the mappings of the Solr
+index for items.</p></li>
+<li><p>Add a new mapping using the source <strong>Media › Media text representation
+content (plain text)</strong>, and choose a Solr field suitable for full text (for
+instance a <code class="docutils literal notranslate"><span class="pre">*_txt</span></code> field).</p></li>
+<li><p>Reindex the items.</p></li>
+</ol>
+<p>See the documentation of the Solr module for more details.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only items are supported. Textual representations are not added to
+indexed media.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Editing a textual representation from its own edit page does not modify
+the media nor the item, so the change is not detected by the Search
+module. Save the item (or rebuild the index) to update the indexed text.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="batch-edit.html" class="btn btn-neutral float-left" title="Batch edit" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="public-display.html" class="btn btn-neutral float-right" title="Public display" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, BibLibre.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

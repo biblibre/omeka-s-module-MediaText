@@ -13,7 +13,7 @@ Features
 
 - Supported formats: plain text, ALTO
 - Resource page block rendering textual representation as plain text
-- Automated text extraction for .pdf, .odt., docx, .doc and .png files
+- Automated text extraction for .pdf, .odt., .docx, .doc and .png files
 - Integration with the `Solr
   <https://github.com/biblibre/omeka-s-module-Solr>`__ module (makes the text
   content searchable)

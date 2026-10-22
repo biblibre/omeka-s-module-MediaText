@@ -1,0 +1,304 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-22 14:39+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: Module.php:153
+msgid "See job details"
+msgstr ""
+
+#: Module.php:259 Module.php:292
+msgid "Textual representations"
+msgstr ""
+
+#: Module.php:627
+#, php-format
+msgid "Extracted by %s"
+msgstr ""
+
+#: src/Listener/AdvancedSearchSharedListenerAggregate.php:98
+msgid "Has textual representation"
+msgstr ""
+
+#: view/media-text/admin/media-representation/add.phtml:1
+#: view/media-text/admin/representation/edit.phtml:1
+msgid "Media Text"
+msgstr ""
+
+#: view/media-text/admin/media-representation/add.phtml:1
+msgid "Add text representation"
+msgstr ""
+
+#: view/media-text/admin/media-text/import.phtml:1
+msgid "ALTO import"
+msgstr ""
+
+#: view/media-text/admin/media-text/import.phtml:6
+msgid "Start import"
+msgstr ""
+
+#: view/media-text/admin/media/section-textual-representations-edit.phtml:17
+msgid "Representation to be removed"
+msgstr ""
+
+#: view/media-text/admin/media/section-textual-representations-edit.phtml:28
+#: view/media-text/admin/media/section-textual-representations-show.phtml:24
+msgid "Automatically extracted"
+msgstr ""
+
+#: view/media-text/admin/media/section-textual-representations-edit.phtml:70
+#: view/media-text/admin/media/section-textual-representations-show.phtml:48
+msgid "This media has no textual representations."
+msgstr ""
+
+#: view/media-text/admin/media/section-textual-representations-edit.phtml:72
+#: view/media-text/admin/media/section-textual-representations-show.phtml:50
+msgid "Start adding textual representations using the sidebar on the right"
+msgstr ""
+
+#: view/media-text/admin/media/section-textual-representations-edit.phtml:83
+msgid "Extract textual representation from media"
+msgstr ""
+
+#: view/media-text/admin/media/section-textual-representations-edit.phtml:88
+msgid "Extract with"
+msgstr ""
+
+#: view/media-text/admin/media/section-textual-representations-edit.phtml:95
+msgid "This extractor is not available"
+msgstr ""
+
+#: view/media-text/admin/media/section-textual-representations-edit.phtml:97
+msgid "(not available)"
+msgstr ""
+
+#: view/media-text/admin/media/section-textual-representations-edit.phtml:104
+msgid "There are no available extractors for this media."
+msgstr ""
+
+#: view/media-text/admin/media/section-textual-representations-edit.phtml:107
+msgid "Import textual representation"
+msgstr ""
+
+#: view/media-text/admin/media/section-textual-representations-edit.phtml:123
+msgid "Remove representation"
+msgstr ""
+
+#: view/media-text/admin/representation/edit.phtml:1
+msgid "Edit text representation"
+msgstr ""
+
+#: view/media-text/admin/representation/show-details.phtml:27
+#: view/media-text/admin/representation/show.phtml:35
+msgid "Content"
+msgstr ""
+
+#: view/media-text/admin/representation/show.phtml:5
+msgid "Go back"
+msgstr ""
+
+#: view/media-text/admin/representation/show.phtml:40
+msgid "Content as plain text"
+msgstr ""
+
+#: view/media-text/common/advanced-search/has-textual-representation.phtml:5
+msgid "Search by textual representations presence"
+msgstr ""
+
+#: view/media-text/common/advanced-search/has-textual-representation.phtml:7
+msgid "Has textual representations"
+msgstr ""
+
+#: view/media-text/common/advanced-search/has-textual-representation.phtml:8
+msgid "Has no textual representations"
+msgstr ""
+
+#: view/media-text/common/advanced-search/has-textual-representation.phtml:10
+msgid "Select textual representation presence..."
+msgstr ""
+
+#: Module.php:149
+#, php-format
+msgid "Compression job started. %s"
+msgstr ""
+
+#: Module.php:514
+msgid "Remove textual representation"
+msgstr ""
+
+#: Module.php:515
+msgid "Do not remove representations"
+msgstr ""
+
+#: Module.php:517
+msgid "Remove all representations"
+msgstr ""
+
+#: Module.php:518
+msgid "Remove automatically extracted representations only"
+msgstr ""
+
+#: Module.php:542
+msgid "Extract textual representation"
+msgstr ""
+
+#: Module.php:548
+msgid "Select extractors"
+msgstr ""
+
+#: src/Form/ConfigForm.php:15
+msgid "Text compression level"
+msgstr ""
+
+#: src/Form/ConfigForm.php:16
+msgid ""
+"Media Text compresses text to reduce the space taken in database. This "
+"setting allows to change the compression level."
+msgstr ""
+
+#: src/Form/ConfigForm.php:18
+msgid "Default compression level"
+msgstr ""
+
+#: src/Form/ConfigForm.php:19
+msgid "0 (no compression)"
+msgstr ""
+
+#: src/Form/ConfigForm.php:20
+msgid "1 (fastest)"
+msgstr ""
+
+#: src/Form/ConfigForm.php:21
+msgid "2"
+msgstr ""
+
+#: src/Form/ConfigForm.php:22
+msgid "3"
+msgstr ""
+
+#: src/Form/ConfigForm.php:23
+msgid "4"
+msgstr ""
+
+#: src/Form/ConfigForm.php:24
+msgid "5"
+msgstr ""
+
+#: src/Form/ConfigForm.php:25
+msgid "6"
+msgstr ""
+
+#: src/Form/ConfigForm.php:26
+msgid "7"
+msgstr ""
+
+#: src/Form/ConfigForm.php:27
+msgid "8"
+msgstr ""
+
+#: src/Form/ConfigForm.php:28
+msgid "9 (best compression)"
+msgstr ""
+
+#: src/Form/ConfigForm.php:37
+msgid "Start compression background job"
+msgstr ""
+
+#: src/Form/ConfigForm.php:38
+msgid "Start background job to recompress textual representations"
+msgstr ""
+
+#: src/Form/RepresentationEditForm.php:30 src/Form/RepresentationForm.php:31
+#: src/Form/Element/TypeSelect.php:11
+#: src/Api/Representation/RepresentationRepresentation.php:109
+msgid "Transcription"
+msgstr ""
+
+#: src/Form/RepresentationEditForm.php:31 src/Form/RepresentationForm.php:32
+#: src/Form/Element/TypeSelect.php:12
+#: src/Api/Representation/RepresentationRepresentation.php:110
+msgid "Transliteration"
+msgstr ""
+
+#: src/Form/RepresentationEditForm.php:32 src/Form/RepresentationForm.php:33
+#: src/Form/Element/TypeSelect.php:13
+#: src/Api/Representation/RepresentationRepresentation.php:111
+msgid "Translation"
+msgstr ""
+
+#: src/Form/RepresentationEditForm.php:33 src/Form/RepresentationForm.php:34
+#: src/Form/Element/TypeSelect.php:14
+#: src/Api/Representation/RepresentationRepresentation.php:112
+msgid "Other"
+msgstr ""
+
+#: src/Representation/Ingester/Textarea.php:19
+msgid "Text area"
+msgstr ""
+
+#: src/Controller/Admin/RepresentationController.php:49
+msgid "Text representation updated"
+msgstr ""
+
+#: src/Controller/Admin/RepresentationController.php:73
+msgid "text representation"
+msgstr ""
+
+#: src/Controller/Admin/RepresentationController.php:74
+msgid "media-text/admin/representation/show-details"
+msgstr ""
+
+#: src/Controller/Admin/RepresentationController.php:91
+msgid "Text representation deleted"
+msgstr ""
+
+#: src/Controller/Admin/MediaRepresentationController.php:40
+msgid "Text representation added"
+msgstr ""
+
+#: src/View/Helper/TypeSelect.php:18
+msgid "Select type…"
+msgstr ""
+
+#: src/View/Helper/FormatSelect.php:18
+msgid "Select format…"
+msgstr ""
+
+#: src/Site/ResourcePageBlockLayout/RepresentationsAsPlainText.php:12
+msgid "Textual representations as plain text"
+msgstr ""
+
+#: src/Listener/SolrSharedListenerAggregate.php:37
+msgid "Media text representation content (plain text)"
+msgstr ""
+
+#: src/Format/Adapter/AltoAdapter.php:24
+msgid "Representation is empty"
+msgstr ""
+
+#: src/Format/Adapter/AltoAdapter.php:33
+#, php-format
+msgid "Invalid XML: %s at line %d"
+msgstr ""
+
+#: src/Format/Adapter/AltoAdapter.php:47
+msgid "The root XML element is not alto"
+msgstr ""
+
+#: src/Format/Adapter/AltoAdapter.php:53
+msgid "The root XML element does not have a namespace"
+msgstr ""

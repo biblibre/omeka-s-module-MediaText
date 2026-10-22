@@ -1,0 +1,2080 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, BibLibre
+# This file is distributed under the same license as the Media Text package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Media Text \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-22 14:43+0200\n"
+"PO-Revision-Date: 2026-10-22 15:00+0200\n"
+"Last-Translator: Julian Maurice <julian.maurice@biblibre.com>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../automated-extraction.rst:2
+msgid "Automated text extraction"
+msgstr "Extraction automatique du texte"
+
+#: ../../automated-extraction.rst:4
+msgid ""
+"Media Text can create textual representations automatically by extracting"
+" the text from media files, using external programs called *extractors*."
+msgstr ""
+"Media Text peut créer automatiquement des représentations textuelles en "
+"extrayant le texte des fichiers de médias, à l'aide de programmes "
+"externes appelés *extracteurs*."
+
+#: ../../automated-extraction.rst:8
+msgid "Available extractors"
+msgstr "Extracteurs disponibles"
+
+#: ../../automated-extraction.rst:14 ../../developer/extending.rst:22
+msgid "Extractor"
+msgstr "Extracteur"
+
+#: ../../automated-extraction.rst:15
+msgid "File type"
+msgstr "Type de fichier"
+
+#: ../../automated-extraction.rst:16
+msgid "Media type"
+msgstr "Type de média"
+
+#: ../../automated-extraction.rst:17
+msgid "pdftotext"
+msgstr "pdftotext"
+
+#: ../../automated-extraction.rst:18
+msgid ".pdf"
+msgstr ".pdf"
+
+#: ../../automated-extraction.rst:19
+msgid "``application/pdf``"
+msgstr "``application/pdf``"
+
+#: ../../automated-extraction.rst:20
+msgid "odt2txt"
+msgstr "odt2txt"
+
+#: ../../automated-extraction.rst:21
+msgid ".odt"
+msgstr ".odt"
+
+#: ../../automated-extraction.rst:22
+msgid "``application/vnd.oasis.opendocument.text``"
+msgstr "``application/vnd.oasis.opendocument.text``"
+
+#: ../../automated-extraction.rst:23
+msgid "docx2txt"
+msgstr "docx2txt"
+
+#: ../../automated-extraction.rst:24
+msgid ".docx"
+msgstr ".docx"
+
+#: ../../automated-extraction.rst:25
+msgid ""
+"``application/vnd.openxmlformats-"
+"officedocument.wordprocessingml.document``"
+msgstr ""
+"``application/vnd.openxmlformats-"
+"officedocument.wordprocessingml.document``"
+
+#: ../../automated-extraction.rst:26
+msgid "catdoc"
+msgstr "catdoc"
+
+#: ../../automated-extraction.rst:27
+msgid ".doc"
+msgstr ".doc"
+
+#: ../../automated-extraction.rst:28
+msgid "``application/msword``"
+msgstr "``application/msword``"
+
+#: ../../automated-extraction.rst:29
+msgid "tesseract"
+msgstr "tesseract"
+
+#: ../../automated-extraction.rst:30
+msgid ".png"
+msgstr ".png"
+
+#: ../../automated-extraction.rst:31
+msgid "``image/png``"
+msgstr "``image/png``"
+
+#: ../../automated-extraction.rst:33
+msgid ""
+"An extractor is *available* if the corresponding program is installed on "
+"the server (see :doc:`requirements`). An extractor can only be used on "
+"media that have an original file with a supported media type."
+msgstr ""
+"Un extracteur est *disponible* si le programme correspondant est installé"
+" sur le serveur (voir :doc:`requirements`). Un extracteur ne peut être "
+"utilisé que sur des médias disposant d'un fichier original dont le type "
+"de média est pris en charge."
+
+#: ../../automated-extraction.rst:37
+msgid ""
+"``tesseract`` is an OCR (optical character recognition) engine. It is run"
+" with its default settings, which means that it uses the English language"
+" data."
+msgstr ""
+"``tesseract`` est un moteur d'OCR (reconnaissance optique de caractères)."
+" Il est exécuté avec ses paramètres par défaut, c'est-à-dire avec les "
+"données de langue anglaise."
+
+#: ../../automated-extraction.rst:41
+msgid "Extracted representations"
+msgstr "Représentations extraites"
+
+#: ../../automated-extraction.rst:43
+msgid ""
+"Each extractor creates one textual representation with the following "
+"properties:"
+msgstr ""
+"Chaque extracteur crée une représentation textuelle avec les propriétés "
+"suivantes :"
+
+#: ../../automated-extraction.rst:46
+msgid ""
+"**Title**: \"Extracted by <extractor>\" (for instance \"Extracted by "
+"pdftotext\")"
+msgstr ""
+"**Titre** : « Extrait par <extracteur> » (par exemple « Extrait par "
+"pdftotext »)"
+
+#: ../../automated-extraction.rst:47
+msgid "**Type**: Transcription"
+msgstr "**Type** : Transcription"
+
+#: ../../automated-extraction.rst:48
+msgid "**Format**: Plain text"
+msgstr "**Format** : Texte brut"
+
+#: ../../automated-extraction.rst:49
+msgid "**Visibility**: Public"
+msgstr "**Visibilité** : Public"
+
+#: ../../automated-extraction.rst:50
+msgid ""
+"**Source**: the source of the media (usually the name of the original "
+"file, or its URL)"
+msgstr ""
+"**Source** : la source du média (généralement le nom du fichier original,"
+" ou son URL)"
+
+#: ../../automated-extraction.rst:52
+msgid "**Automatically extracted**: yes"
+msgstr "**Extraite automatiquement** : oui"
+
+#: ../../automated-extraction.rst:54
+msgid ""
+"Extracted representations are added after the existing representations of"
+" the media. They can be edited, reordered and deleted like any other "
+"representation."
+msgstr ""
+"Les représentations extraites sont ajoutées après les représentations "
+"existantes du média. Elles peuvent être modifiées, réordonnées et "
+"supprimées comme n'importe quelle autre représentation."
+
+#: ../../automated-extraction.rst:57
+msgid ""
+"Extracting the text of a media file is done synchronously, during the "
+"save of the media. It can be slow for large files, especially with "
+"``tesseract``."
+msgstr ""
+"L'extraction du texte d'un fichier de média est effectuée de manière "
+"synchrone, pendant l'enregistrement du média. Elle peut être lente pour "
+"les fichiers volumineux, en particulier avec ``tesseract``."
+
+#: ../../automated-extraction.rst:60
+msgid ""
+"If the media files are not stored locally (for instance with a module "
+"storing files on Amazon S3), they are downloaded to a temporary file "
+"before extraction."
+msgstr ""
+"Si les fichiers des médias ne sont pas stockés localement (par exemple "
+"avec un module qui stocke les fichiers sur Amazon S3), ils sont "
+"téléchargés dans un fichier temporaire avant l'extraction."
+
+#: ../../automated-extraction.rst:64
+msgid "When does extraction happen?"
+msgstr "Quand l'extraction a-t-elle lieu ?"
+
+#: ../../automated-extraction.rst:67
+msgid "On media creation"
+msgstr "À la création d'un média"
+
+#: ../../automated-extraction.rst:69
+msgid ""
+"When a media is created (for instance when adding a file to an item, or "
+"during an import), **all available extractors** that support the media "
+"file are run automatically."
+msgstr ""
+"Lorsqu'un média est créé (par exemple lors de l'ajout d'un fichier à un "
+"contenu, ou pendant un import), **tous les extracteurs disponibles** qui "
+"prennent en charge le fichier du média sont exécutés automatiquement."
+
+#: ../../automated-extraction.rst:74
+msgid "On media edition"
+msgstr "À la modification d'un média"
+
+#: ../../automated-extraction.rst:76
+msgid ""
+"Edit the media, click on the **Textual representations** tab, and in the "
+"sidebar, under **Extract textual representation from media**, check the "
+"extractors to use. Then click on **Save**."
+msgstr ""
+"Modifiez le média, cliquez sur l'onglet **Représentations textuelles**, "
+"puis dans la barre latérale, sous **Extraire une représentation textuelle"
+" du média**, cochez les extracteurs à utiliser. Cliquez ensuite sur "
+"**Enregistrer**."
+
+#: ../../automated-extraction.rst:80
+msgid ""
+"Only the extractors that support the media file are listed. Extractors "
+"whose program is not installed are listed but disabled, with the mention "
+"\"(not available)\"."
+msgstr ""
+"Seuls les extracteurs qui prennent en charge le fichier du média sont "
+"listés. Les extracteurs dont le programme n'est pas installé sont listés "
+"mais désactivés, avec la mention « (non disponible) »."
+
+#: ../../automated-extraction.rst:84
+msgid ""
+"Extraction does not replace existing representations: running the same "
+"extractor twice creates two representations. To replace extracted "
+"representations, delete them first (see :doc:`batch-edit`)."
+msgstr ""
+"L'extraction ne remplace pas les représentations existantes : exécuter "
+"deux fois le même extracteur crée deux représentations. Pour remplacer "
+"des représentations extraites, supprimez-les d'abord (voir :doc:`batch-"
+"edit`)."
+
+#: ../../automated-extraction.rst:89
+msgid "In batch"
+msgstr "Par lot"
+
+#: ../../automated-extraction.rst:91
+msgid ""
+"Extractors can be run on many items or media at once using the batch edit"
+" form. See :doc:`batch-edit`."
+msgstr ""
+"Les extracteurs peuvent être exécutés sur de nombreux contenus ou médias "
+"à la fois grâce au formulaire de modification par lot. Voir :doc:`batch-"
+"edit`."
+
+#: ../../batch-edit.rst:2
+msgid "Batch edit"
+msgstr "Modification par lot"
+
+#: ../../batch-edit.rst:4
+msgid ""
+"Media Text adds a section named **Media Text** to the batch edit form of "
+"items and media in the admin interface. It allows to remove and to "
+"extract textual representations of many resources at once."
+msgstr ""
+"Media Text ajoute une section nommée **Media Text** au formulaire de "
+"modification par lot des contenus et des médias dans l'interface "
+"d'administration. Elle permet de supprimer et d'extraire les "
+"représentations textuelles de nombreuses ressources à la fois."
+
+#: ../../batch-edit.rst:8
+msgid ""
+"To use it, browse items or media, select resources (or choose to edit all"
+" resources), and choose **Edit selected** (or **Edit all**). The `batch "
+"edit <https://omeka.org/s/docs/user-manual/content/items/#batch-edit-"
+"items>`__ feature of Omeka S is available to editors, site administrators"
+" and global administrators."
+msgstr ""
+"Pour l'utiliser, parcourez les contenus ou les médias, sélectionnez des "
+"ressources (ou choisissez de modifier toutes les ressources), puis "
+"choisissez **Modifier la sélection** (ou **Modifier tout**). La "
+"fonctionnalité de `modification par lot <https://omeka.org/s/docs/user-"
+"manual/content/items/#batch-edit-items>`__ d'Omeka S est accessible aux "
+"éditeurs, aux administrateurs de site et aux administrateurs généraux."
+
+#: ../../batch-edit.rst:15
+msgid "Options"
+msgstr "Options"
+
+#: ../../batch-edit.rst:17
+msgid "Remove textual representation"
+msgstr "Supprimer la représentation textuelle"
+
+#: ../../batch-edit.rst:18
+msgid "*Do not remove representations* (default)"
+msgstr "*Ne pas supprimer les représentations* (par défaut)"
+
+#: ../../batch-edit.rst:19
+msgid "*Remove all representations*: deletes all textual representations"
+msgstr ""
+"*Supprimer toutes les représentations* : supprime toutes les "
+"représentations textuelles"
+
+#: ../../batch-edit.rst:20
+msgid ""
+"*Remove automatically extracted representations only*: deletes only the "
+"representations created by an extractor (see :doc:`automated-"
+"extraction`). Representations added manually are kept."
+msgstr ""
+"*Supprimer uniquement les représentations extraites automatiquement* : "
+"supprime uniquement les représentations créées par un extracteur (voir "
+":doc:`automated-extraction`). Les représentations ajoutées manuellement "
+"sont conservées."
+
+#: ../../batch-edit.rst:24
+msgid "Extract textual representation"
+msgstr "Extraire une représentation textuelle"
+
+#: ../../batch-edit.rst:25
+msgid ""
+"A list of the available extractors (only extractors whose program is "
+"installed on the server are listed). Select one or more extractors to "
+"create new textual representations. An extractor is only applied to media"
+" whose file type it supports; other media are left unchanged."
+msgstr ""
+"La liste des extracteurs disponibles (seuls les extracteurs dont le "
+"programme est installé sur le serveur sont listés). Sélectionnez un ou "
+"plusieurs extracteurs pour créer de nouvelles représentations textuelles."
+" Un extracteur n'est appliqué qu'aux médias dont il prend en charge le "
+"type de fichier ; les autres médias restent inchangés."
+
+#: ../../batch-edit.rst:30
+msgid "If no extractor is available, this field is not displayed."
+msgstr "Si aucun extracteur n'est disponible, ce champ n'est pas affiché."
+
+#: ../../batch-edit.rst:32
+msgid ""
+"When both options are used, removal is done first, then extraction. For "
+"instance, to re-run text extraction and replace previous results, select "
+"*Remove automatically extracted representations only* and the extractors "
+"to use."
+msgstr ""
+"Lorsque les deux options sont utilisées, la suppression est effectuée en "
+"premier, puis l'extraction. Par exemple, pour relancer l'extraction du "
+"texte et remplacer les résultats précédents, sélectionnez *Supprimer "
+"uniquement les représentations extraites automatiquement* ainsi que les "
+"extracteurs à utiliser."
+
+#: ../../batch-edit.rst:37
+msgid ""
+"When editing items, the options are applied to all the media of each "
+"selected item."
+msgstr ""
+"Lors de la modification de contenus, les options sont appliquées à tous "
+"les médias de chaque contenu sélectionné."
+
+#: ../../batch-edit.rst:42
+msgid ""
+"Text extraction can take a long time. When using **Edit all**, Omeka S "
+"processes the batch edit in a background job: check its status in "
+"**Jobs** in the admin menu. When using **Edit selected**, prefer small "
+"selections to avoid timeouts."
+msgstr ""
+"L'extraction du texte peut prendre beaucoup de temps. Avec **Modifier "
+"tout**, Omeka S traite la modification par lot dans une tâche en arrière-"
+"plan : vérifiez son état dans **Tâches** dans le menu d'administration. "
+"Avec **Modifier la sélection**, privilégiez de petites sélections pour "
+"éviter les dépassements de délai (*timeouts*)."
+
+#: ../../configuration.rst:2
+msgid "Configuration"
+msgstr "Configuration"
+
+#: ../../configuration.rst:4
+msgid ""
+"The module configuration form is available in the admin interface, in "
+"**Modules**, by clicking on the **Configure** button of Media Text."
+msgstr ""
+"Le formulaire de configuration du module est accessible dans l'interface "
+"d'administration, dans **Modules**, en cliquant sur le bouton "
+"**Configurer** de Media Text."
+
+#: ../../configuration.rst:8
+msgid "Text compression level"
+msgstr "Niveau de compression du texte"
+
+#: ../../configuration.rst:10
+msgid ""
+"Media Text compresses the content of textual representations to reduce "
+"the space taken in the database. This setting allows to change the zlib "
+"compression level:"
+msgstr ""
+"Media Text compresse le contenu des représentations textuelles afin de "
+"réduire l'espace occupé dans la base de données. Ce paramètre permet de "
+"modifier le niveau de compression zlib :"
+
+#: ../../configuration.rst:14
+msgid ""
+"*Default compression level* (default): the zlib default, currently "
+"equivalent to 6,"
+msgstr ""
+"*Niveau de compression par défaut* (par défaut) : la valeur par défaut de"
+" zlib, actuellement équivalente à 6,"
+
+#: ../../configuration.rst:16
+msgid "*0 (no compression)*,"
+msgstr "*0 (aucune compression)*,"
+
+#: ../../configuration.rst:17
+msgid "*1 (fastest)* to *9 (best compression)*."
+msgstr "*1 (le plus rapide)* à *9 (meilleure compression)*."
+
+#: ../../configuration.rst:19
+msgid ""
+"A higher level saves more disk space but takes more time to compress. The"
+" decompression time is not significantly affected."
+msgstr ""
+"Un niveau plus élevé économise davantage d'espace disque mais demande "
+"plus de temps de compression. Le temps de décompression n'est pas affecté"
+" de manière significative."
+
+#: ../../configuration.rst:22
+msgid ""
+"The new level is only applied to textual representations created or "
+"modified after the change. To apply it to existing representations, use "
+"the compression background job."
+msgstr ""
+"Le nouveau niveau ne s'applique qu'aux représentations textuelles créées "
+"ou modifiées après le changement. Pour l'appliquer aux représentations "
+"existantes, utilisez la tâche de compression en arrière-plan."
+
+#: ../../configuration.rst:27
+msgid "Start compression background job"
+msgstr "Lancer la tâche de compression en arrière-plan"
+
+#: ../../configuration.rst:29
+msgid ""
+"When this box is checked, saving the configuration form starts a "
+"background job that recompresses all existing textual representations "
+"with the selected compression level. A link to the job details is "
+"displayed."
+msgstr ""
+"Lorsque cette case est cochée, l'enregistrement du formulaire de "
+"configuration lance une tâche en arrière-plan qui recompresse toutes les "
+"représentations textuelles existantes avec le niveau de compression "
+"sélectionné. Un lien vers le détail de la tâche est affiché."
+
+#: ../../configuration.rst:33
+msgid ""
+"The job logs its progress every 100 representations. It can be stopped "
+"from the job details page; representations already processed keep their "
+"new compression level."
+msgstr ""
+"La tâche journalise sa progression toutes les 100 représentations. Elle "
+"peut être arrêtée depuis la page de détail de la tâche ; les "
+"représentations déjà traitées conservent leur nouveau niveau de "
+"compression."
+
+#: ../../developer/extending.rst:2
+msgid "Extending Media Text"
+msgstr "Étendre Media Text"
+
+#: ../../developer/extending.rst:4
+msgid ""
+"Other modules can extend Media Text by providing new formats, ingesters "
+"and extractors. Each of them is a plugin, registered in the module "
+"configuration (``config/module.config.php``) under a dedicated key, using"
+" the usual ``invokables`` and ``factories`` sections."
+msgstr ""
+"D'autres modules peuvent étendre Media Text en fournissant de nouveaux "
+"formats, ingesteurs et extracteurs. Chacun d'eux est un plugin, "
+"enregistré dans la configuration du module (``config/module.config.php``)"
+" sous une clé dédiée, à l'aide des sections habituelles ``invokables`` et"
+" ``factories``."
+
+#: ../../developer/extending.rst:13
+msgid "Plugin"
+msgstr "Plugin"
+
+#: ../../developer/extending.rst:14
+msgid "Configuration key"
+msgstr "Clé de configuration"
+
+#: ../../developer/extending.rst:15
+msgid "Interface"
+msgstr "Interface"
+
+#: ../../developer/extending.rst:16
+msgid "Format adapter"
+msgstr "Adaptateur de format"
+
+#: ../../developer/extending.rst:17
+msgid "``mediatext_format_adapters``"
+msgstr "``mediatext_format_adapters``"
+
+#: ../../developer/extending.rst:18
+msgid "``MediaText\\Format\\Adapter\\FormatAdapterInterface``"
+msgstr "``MediaText\\Format\\Adapter\\FormatAdapterInterface``"
+
+#: ../../developer/extending.rst:19
+msgid "Ingester"
+msgstr "Ingesteur"
+
+#: ../../developer/extending.rst:20
+msgid "``mediatext_representation_ingesters``"
+msgstr "``mediatext_representation_ingesters``"
+
+#: ../../developer/extending.rst:21
+msgid "``MediaText\\Representation\\Ingester\\RepresentationIngesterInterface``"
+msgstr "``MediaText\\Representation\\Ingester\\RepresentationIngesterInterface``"
+
+#: ../../developer/extending.rst:23
+msgid "``mediatext_representation_extractors``"
+msgstr "``mediatext_representation_extractors``"
+
+#: ../../developer/extending.rst:24
+msgid "``MediaText\\Representation\\Extractor\\RepresentationExtractorInterface``"
+msgstr "``MediaText\\Representation\\Extractor\\RepresentationExtractorInterface``"
+
+#: ../../developer/extending.rst:26
+msgid ""
+"The key used to register a plugin is its name. It must be the same as the"
+" value returned by its ``getName()`` method."
+msgstr ""
+"La clé utilisée pour enregistrer un plugin est son nom. Elle doit être "
+"identique à la valeur retournée par sa méthode ``getName()``."
+
+#: ../../developer/extending.rst:30
+msgid "Format adapters"
+msgstr "Adaptateurs de format"
+
+#: ../../developer/extending.rst:32
+msgid ""
+"A format adapter validates the content of a representation, and converts "
+"it to plain text (for display and indexing)."
+msgstr ""
+"Un adaptateur de format valide le contenu d'une représentation et le "
+"convertit en texte brut (pour l'affichage et l'indexation)."
+
+#: ../../developer/extending.rst:77
+msgid ""
+"``AbstractFormatAdapter`` implements ``getSortableString()`` (formats are"
+" sorted by label in select elements)."
+msgstr ""
+"``AbstractFormatAdapter`` implémente ``getSortableString()`` (les formats"
+" sont triés par libellé dans les listes déroulantes)."
+
+#: ../../developer/extending.rst:81
+msgid "Ingesters"
+msgstr "Ingesteurs"
+
+#: ../../developer/extending.rst:83
+msgid ""
+"An ingester provides a way to create a textual representation from the "
+"media edit form (and from the API, with ``o:ingester``). Media Text "
+"provides two ingesters: ``textarea`` and ``upload``. Each ingester "
+"appears as a button in the **Import textual representation** section of "
+"the sidebar."
+msgstr ""
+"Un ingesteur fournit un moyen de créer une représentation textuelle "
+"depuis le formulaire de modification du média (et depuis l'API, avec "
+"``o:ingester``). Media Text fournit deux ingesteurs : ``textarea`` et "
+"``upload``. Chaque ingesteur apparaît sous forme de bouton dans la "
+"section **Importer une représentation textuelle** de la barre latérale."
+
+#: ../../developer/extending.rst:135
+msgid "Notes:"
+msgstr "Remarques :"
+
+#: ../../developer/extending.rst:137
+msgid ""
+"``form()`` returns the HTML of the form fields. Field names must be of "
+"the form ``o:mediatext_representation[__index__][...]``; ``__index__`` is"
+" replaced by the index of the representation in JavaScript. "
+"``AbstractRepresentationIngester::form()`` returns the **Title**, "
+"**Type** and **Format** fields."
+msgstr ""
+"``form()`` retourne le HTML des champs du formulaire. Les noms des champs"
+" doivent être de la forme ``o:mediatext_representation[__index__][...]`` "
+"; ``__index__`` est remplacé en JavaScript par l'index de la "
+"représentation. ``AbstractRepresentationIngester::form()`` retourne les "
+"champs **Titre**, **Type** et **Format**."
+
+#: ../../developer/extending.rst:142
+msgid ""
+"``ingest()`` must call ``$representation->setContent()``, and can call "
+"``$representation->setSource()``. The request data contains the fields of"
+" the form for this representation only. Uploaded files are available with"
+" ``$request->getFileData()``."
+msgstr ""
+"``ingest()`` doit appeler ``$representation->setContent()``, et peut "
+"appeler ``$representation->setSource()``. Les données de la requête "
+"contiennent uniquement les champs du formulaire de cette représentation. "
+"Les fichiers chargés sont accessibles avec ``$request->getFileData()``."
+
+#: ../../developer/extending.rst:146
+msgid ""
+"Content validation and compression are done by Media Text after "
+"``ingest()``."
+msgstr ""
+"La validation et la compression du contenu sont effectuées par Media Text"
+" après ``ingest()``."
+
+#: ../../developer/extending.rst:150
+msgid "Extractors"
+msgstr "Extracteurs"
+
+#: ../../developer/extending.rst:152
+msgid "An extractor creates textual representations from a media automatically."
+msgstr ""
+"Un extracteur crée automatiquement des représentations textuelles à "
+"partir d'un média."
+
+#: ../../developer/extending.rst:162
+msgid "The interface requires the following methods:"
+msgstr "L'interface impose les méthodes suivantes :"
+
+#: ../../developer/extending.rst:164
+msgid "``getName(): string`` and ``getLabel(): string``"
+msgstr "``getName(): string`` et ``getLabel(): string``"
+
+#: ../../developer/extending.rst:165
+msgid ""
+"Name and human-readable label. The label is used in the default title of "
+"extracted representations (\"Extracted by <label>\")."
+msgstr ""
+"Nom et libellé lisible. Le libellé est utilisé dans le titre par défaut "
+"des représentations extraites (« Extrait par <libellé> »)."
+
+#: ../../developer/extending.rst:168
+msgid "``isAvailable(): bool``"
+msgstr "``isAvailable(): bool``"
+
+#: ../../developer/extending.rst:169
+msgid ""
+"Whether the extractor can be used on this server (for instance, whether "
+"the required program is installed). Unavailable extractors are hidden "
+"from the batch edit form and disabled in the media edit form."
+msgstr ""
+"Indique si l'extracteur peut être utilisé sur ce serveur (par exemple, si"
+" le programme requis est installé). Les extracteurs non disponibles sont "
+"masqués dans le formulaire de modification par lot et désactivés dans le "
+"formulaire de modification du média."
+
+#: ../../developer/extending.rst:173
+msgid "``canExtractFrom(MediaRepresentation $media): bool``"
+msgstr "``canExtractFrom(MediaRepresentation $media): bool``"
+
+#: ../../developer/extending.rst:174
+msgid ""
+"Whether the extractor supports this media (usually based on its media "
+"type)."
+msgstr ""
+"Indique si l'extracteur prend en charge ce média (généralement en "
+"fonction de son type de média)."
+
+#: ../../developer/extending.rst:177
+msgid "``getRepresentations(MediaRepresentation $media): array``"
+msgstr "``getRepresentations(MediaRepresentation $media): array``"
+
+#: ../../developer/extending.rst:178
+msgid ""
+"Returns an array of new ``MediaText\\Entity\\Representation`` objects. "
+"Each one must have at least a type, a format and a content (set with "
+"``setContent()``)."
+msgstr ""
+"Retourne un tableau de nouveaux objets "
+"``MediaText\\Entity\\Representation``. Chacun doit avoir au minimum un "
+"type, un format et un contenu (défini avec ``setContent()``)."
+
+#: ../../developer/extending.rst:182
+msgid ""
+"Media Text then takes care of the rest: attaching the representations to "
+"the media, setting their title (if empty), position, timestamps and "
+"\"extracted\" flag, and compressing the content."
+msgstr ""
+"Media Text se charge ensuite du reste : rattacher les représentations au "
+"média, définir leur titre (s'il est vide), leur position, leurs "
+"horodatages et leur indicateur « extraite », et compresser le contenu."
+
+#: ../../developer/extending.rst:186
+msgid ""
+"For extractors working on the original file of the media, extend "
+"``MediaText\\Representation\\Extractor\\AbstractFileRepresentationExtractor``"
+" and implement ``getRepresentationsFromFile(string $filepath): array``. "
+"The abstract class retrieves a local path of the file (downloading it if "
+"the file store is not local) and sets the source of the representations "
+"to the source of the media. The file store and the downloader must be "
+"injected in the factory:"
+msgstr ""
+"Pour les extracteurs qui travaillent sur le fichier original du média, "
+"étendez "
+"``MediaText\\Representation\\Extractor\\AbstractFileRepresentationExtractor``"
+" et implémentez ``getRepresentationsFromFile(string $filepath): array``. "
+"La classe abstraite récupère un chemin local vers le fichier (en le "
+"téléchargeant si le stockage des fichiers n'est pas local) et définit la "
+"source des représentations à partir de la source du média. Le stockage "
+"des fichiers et le téléchargeur doivent être injectés dans la fabrique "
+"(*factory*) :"
+
+#: ../../developer/extending.rst:214
+msgid "See ``src/Representation/Extractor/Tesseract.php`` for a complete example."
+msgstr ""
+"Voir ``src/Representation/Extractor/Tesseract.php`` pour un exemple "
+"complet."
+
+#: ../../developer/extending.rst:217
+msgid "PHP API"
+msgstr "API PHP"
+
+#: ../../developer/extending.rst:219
+msgid ""
+"``MediaText\\Api\\Representation\\RepresentationRepresentation`` provides"
+" the following methods, useful in themes and modules:"
+msgstr ""
+"``MediaText\\Api\\Representation\\RepresentationRepresentation`` fournit "
+"les méthodes suivantes, utiles dans les thèmes et les modules :"
+
+#: ../../developer/extending.rst:226
+msgid "Method"
+msgstr "Méthode"
+
+#: ../../developer/extending.rst:227 ../../developer/rest-api.rst:85
+msgid "Description"
+msgstr "Description"
+
+#: ../../developer/extending.rst:228
+msgid "``media()``"
+msgstr "``media()``"
+
+#: ../../developer/extending.rst:229
+msgid "The media (``MediaRepresentation``)"
+msgstr "Le média (``MediaRepresentation``)"
+
+#: ../../developer/extending.rst:230
+msgid "``title()``, ``type()``, ``format()``, ``source()``, ``position()``"
+msgstr "``title()``, ``type()``, ``format()``, ``source()``, ``position()``"
+
+#: ../../developer/extending.rst:231
+msgid "Properties of the representation"
+msgstr "Propriétés de la représentation"
+
+#: ../../developer/extending.rst:232
+msgid "``typeLabel()``, ``formatLabel()``"
+msgstr "``typeLabel()``, ``formatLabel()``"
+
+#: ../../developer/extending.rst:233
+msgid "Human-readable labels for the type and the format"
+msgstr "Libellés lisibles du type et du format"
+
+#: ../../developer/extending.rst:234
+msgid "``isPublic()``, ``isExtracted()``"
+msgstr "``isPublic()``, ``isExtracted()``"
+
+#: ../../developer/extending.rst:235
+msgid "Visibility and \"automatically extracted\" flag"
+msgstr "Visibilité et indicateur « extraite automatiquement »"
+
+#: ../../developer/extending.rst:236
+msgid "``content()``"
+msgstr "``content()``"
+
+#: ../../developer/extending.rst:237
+msgid "The content, uncompressed, in its original format"
+msgstr "Le contenu, décompressé, dans son format d'origine"
+
+#: ../../developer/extending.rst:238
+msgid "``contentAsPlainText()``"
+msgstr "``contentAsPlainText()``"
+
+#: ../../developer/extending.rst:239
+msgid "The content converted to plain text by the format adapter"
+msgstr "Le contenu converti en texte brut par l'adaptateur de format"
+
+#: ../../developer/extending.rst:240
+msgid "``created()``, ``modified()``"
+msgstr "``created()``, ``modified()``"
+
+#: ../../developer/extending.rst:241
+msgid "Timestamps (``DateTime``)"
+msgstr "Horodatages (``DateTime``)"
+
+#: ../../developer/extending.rst:243
+msgid "Example, in a theme's media page:"
+msgstr "Exemple, dans la page d'un média d'un thème :"
+
+#: ../../developer/rest-api.rst:2
+msgid "REST API"
+msgstr "API REST"
+
+#: ../../developer/rest-api.rst:4
+msgid ""
+"Media Text adds a new API resource named ``mediatext_representations``. "
+"It can be used through the Omeka S `REST API "
+"<https://omeka.org/s/docs/developer/api/rest_api/>`__ and the PHP API "
+"(``$api->search('mediatext_representations', ...)``)."
+msgstr ""
+"Media Text ajoute une nouvelle ressource d'API nommée "
+"``mediatext_representations``. Elle peut être utilisée via l'`API REST "
+"<https://omeka.org/s/docs/developer/api/rest_api/>`__ d'Omeka S et l'API "
+"PHP (``$api->search('mediatext_representations', ...)``)."
+
+#: ../../developer/rest-api.rst:9
+msgid ""
+"The usual Omeka S rules apply: authentication with key identity and key "
+"credential is needed to create, update and delete representations, and to"
+" read private ones (see :ref:`visibility`)."
+msgstr ""
+"Les règles habituelles d'Omeka S s'appliquent : une authentification par "
+"identité de clé (*key identity*) et identifiant de clé (*key credential*)"
+" est nécessaire pour créer, modifier et supprimer des représentations, "
+"ainsi que pour lire les représentations privées (voir :ref:`visibility`)."
+
+#: ../../developer/rest-api.rst:14
+msgid "Representation JSON-LD"
+msgstr "JSON-LD d'une représentation"
+
+#: ../../developer/rest-api.rst:16
+msgid "``GET /api/mediatext_representations/:id``"
+msgstr "``GET /api/mediatext_representations/:id``"
+
+#: ../../developer/rest-api.rst:42
+msgid ""
+"``o:content`` is returned uncompressed, in its original format (not "
+"converted to plain text)."
+msgstr ""
+"``o:content`` est retourné décompressé, dans son format d'origine (non "
+"converti en texte brut)."
+
+#: ../../developer/rest-api.rst:45
+msgid ""
+"Values of ``o:type``: ``transcription``, ``transliteration``, "
+"``translation``, ``other``."
+msgstr ""
+"Valeurs de ``o:type`` : ``transcription``, ``transliteration``, "
+"``translation``, ``other``."
+
+#: ../../developer/rest-api.rst:48
+msgid ""
+"Values of ``o:format``: ``plain_text``, ``alto`` (and any format added by"
+" other modules, see :doc:`extending`)."
+msgstr ""
+"Valeurs de ``o:format`` : ``plain_text``, ``alto`` (et tout format ajouté"
+" par d'autres modules, voir :doc:`extending`)."
+
+#: ../../developer/rest-api.rst:52
+msgid "Media JSON-LD"
+msgstr "JSON-LD d'un média"
+
+#: ../../developer/rest-api.rst:54
+msgid ""
+"The JSON-LD of a media that has textual representations contains an "
+"additional key, ``o-module-mediatext:representations``, with references "
+"to these representations:"
+msgstr ""
+"Le JSON-LD d'un média qui possède des représentations textuelles contient"
+" une clé supplémentaire, ``o-module-mediatext:representations``, avec des"
+" références vers ces représentations :"
+
+#: ../../developer/rest-api.rst:73 ../../mediatext-search.rst:2
+msgid "Search"
+msgstr "Recherche"
+
+#: ../../developer/rest-api.rst:75
+msgid "``GET /api/mediatext_representations``"
+msgstr "``GET /api/mediatext_representations``"
+
+#: ../../developer/rest-api.rst:77
+msgid ""
+"Available query parameters (in addition to the standard ones like "
+"``page``, ``per_page``, ``sort_by``, ``sort_order``):"
+msgstr ""
+"Paramètres de requête disponibles (en plus des paramètres standards comme"
+" ``page``, ``per_page``, ``sort_by``, ``sort_order``) :"
+
+#: ../../developer/rest-api.rst:84
+msgid "Parameter"
+msgstr "Paramètre"
+
+#: ../../developer/rest-api.rst:86
+msgid "``media_id``"
+msgstr "``media_id``"
+
+#: ../../developer/rest-api.rst:87
+msgid "ID of the media"
+msgstr "ID du média"
+
+#: ../../developer/rest-api.rst:88
+msgid "``title``"
+msgstr "``title``"
+
+#: ../../developer/rest-api.rst:89
+msgid "Exact title"
+msgstr "Titre exact"
+
+#: ../../developer/rest-api.rst:90
+msgid "``type``"
+msgstr "``type``"
+
+#: ../../developer/rest-api.rst:91
+msgid "Type (``transcription``, ``transliteration``, ...)"
+msgstr "Type (``transcription``, ``transliteration``, ...)"
+
+#: ../../developer/rest-api.rst:92
+msgid "``format``"
+msgstr "``format``"
+
+#: ../../developer/rest-api.rst:93
+msgid "Format (``plain_text``, ``alto``, ...)"
+msgstr "Format (``plain_text``, ``alto``, ...)"
+
+#: ../../developer/rest-api.rst:95
+msgid ""
+"``sort_by`` accepts: ``id``, ``title``, ``type``, ``format``, "
+"``position``, ``created``, ``modified``."
+msgstr ""
+"``sort_by`` accepte : ``id``, ``title``, ``type``, ``format``, "
+"``position``, ``created``, ``modified``."
+
+#: ../../developer/rest-api.rst:98
+msgid "Example: all representations of media 42, in order::"
+msgstr "Exemple : toutes les représentations du média 42, dans l'ordre ::"
+
+#: ../../developer/rest-api.rst:103
+msgid "Items and media search"
+msgstr "Recherche de contenus et de médias"
+
+#: ../../developer/rest-api.rst:105
+msgid ""
+"The ``mediatext_has_textual_representations`` parameter (``1`` or ``0``) "
+"can be passed to ``/api/items`` and ``/api/media`` to filter resources by"
+" presence of textual representations. It is only taken into account for "
+"admin requests (see :doc:`../mediatext-search`)."
+msgstr ""
+"Le paramètre ``mediatext_has_textual_representations`` (``1`` ou ``0``) "
+"peut être passé à ``/api/items`` et ``/api/media`` pour filtrer les "
+"ressources selon la présence de représentations textuelles. Il n'est pris"
+" en compte que pour les requêtes d'administration (voir :doc"
+":`../mediatext-search`)."
+
+#: ../../developer/rest-api.rst:114
+msgid "Create"
+msgstr "Créer"
+
+#: ../../developer/rest-api.rst:116
+msgid "``POST /api/mediatext_representations``"
+msgstr "``POST /api/mediatext_representations``"
+
+#: ../../developer/rest-api.rst:118
+msgid ""
+"Representations are created through an *ingester* (see :doc:`extending`),"
+" given by ``o:ingester``. With the ``textarea`` ingester, the content is "
+"given in the ``content`` key:"
+msgstr ""
+"Les représentations sont créées via un *ingesteur* (voir "
+":doc:`extending`), indiqué par ``o:ingester``. Avec l'ingesteur "
+"``textarea``, le contenu est fourni dans la clé ``content`` :"
+
+#: ../../developer/rest-api.rst:134
+msgid ""
+"With the ``upload`` ingester, send a ``multipart/form-data`` request with"
+" the JSON data in the ``data`` field, the file in "
+"``upload_file[<index>]``, and the same ``<index>`` in the ``file_index`` "
+"key of the JSON data. The file name is stored as source, unless "
+"``o:source`` is given."
+msgstr ""
+"Avec l'ingesteur ``upload``, envoyez une requête ``multipart/form-data`` "
+"avec les données JSON dans le champ ``data``, le fichier dans "
+"``upload_file[<index>]``, et le même ``<index>`` dans la clé "
+"``file_index`` des données JSON. Le nom du fichier est enregistré comme "
+"source, sauf si ``o:source`` est fourni."
+
+#: ../../developer/rest-api.rst:139
+msgid ""
+"The content is validated according to its format; validation errors are "
+"returned as usual by the API."
+msgstr ""
+"Le contenu est validé en fonction de son format ; les erreurs de "
+"validation sont retournées de la manière habituelle par l'API."
+
+#: ../../developer/rest-api.rst:144
+msgid ""
+"A representation created this way gets the position ``0``. Use the media "
+"update described below to control the order of representations."
+msgstr ""
+"Une représentation créée de cette manière reçoit la position ``0``. "
+"Utilisez la mise à jour du média décrite ci-dessous pour contrôler "
+"l'ordre des représentations."
+
+#: ../../developer/rest-api.rst:148
+msgid "Update"
+msgstr "Modifier"
+
+#: ../../developer/rest-api.rst:150
+msgid "``PATCH /api/mediatext_representations/:id`` (or ``PUT``)"
+msgstr "``PATCH /api/mediatext_representations/:id`` (ou ``PUT``)"
+
+#: ../../developer/rest-api.rst:152
+msgid ""
+"Accepted keys: ``o:title``, ``o:type``, ``o:format``, ``o:is_public``, "
+"``o:content``. The content is validated according to the format."
+msgstr ""
+"Clés acceptées : ``o:title``, ``o:type``, ``o:format``, ``o:is_public``, "
+"``o:content``. Le contenu est validé en fonction du format."
+
+#: ../../developer/rest-api.rst:156
+msgid "Delete"
+msgstr "Supprimer"
+
+#: ../../developer/rest-api.rst:158
+msgid "``DELETE /api/mediatext_representations/:id``"
+msgstr "``DELETE /api/mediatext_representations/:id``"
+
+#: ../../developer/rest-api.rst:161
+msgid "Managing representations through the media"
+msgstr "Gérer les représentations via le média"
+
+#: ../../developer/rest-api.rst:163
+msgid ""
+"Representations can also be managed when updating a media "
+"(``PUT``/``PATCH /api/media/:id``), with the "
+"``o:mediatext_representation`` key. This is what the admin interface "
+"uses. When this key is present:"
+msgstr ""
+"Les représentations peuvent aussi être gérées lors de la mise à jour d'un"
+" média (``PUT``/``PATCH /api/media/:id``), avec la clé "
+"``o:mediatext_representation``. C'est ce qu'utilise l'interface "
+"d'administration. Lorsque cette clé est présente :"
+
+#: ../../developer/rest-api.rst:167
+msgid "its items are processed in order and their position is set accordingly,"
+msgstr ""
+"ses éléments sont traités dans l'ordre et leur position est définie en "
+"conséquence,"
+
+#: ../../developer/rest-api.rst:168
+msgid ""
+"an item with an ``o:id`` keeps an existing representation; its "
+"``o:is_public`` can be changed,"
+msgstr ""
+"un élément avec un ``o:id`` conserve une représentation existante ; son "
+"``o:is_public`` peut être modifié,"
+
+#: ../../developer/rest-api.rst:170
+msgid ""
+"an item without ``o:id`` creates a new representation (same keys as for "
+":ref:`create`, without ``o:media``),"
+msgstr ""
+"un élément sans ``o:id`` crée une nouvelle représentation (mêmes clés que"
+" pour :ref:`create`, sans ``o:media``),"
+
+#: ../../developer/rest-api.rst:172
+msgid "**existing representations of the media that are not listed are deleted**."
+msgstr ""
+"**les représentations existantes du média qui ne sont pas listées sont "
+"supprimées**."
+
+#: ../../developer/rest-api.rst:190
+msgid ""
+"Additional keys are accepted when updating media and items (including "
+"batch updates):"
+msgstr ""
+"Des clés supplémentaires sont acceptées lors de la mise à jour de médias "
+"et de contenus (y compris les mises à jour par lot) :"
+
+#: ../../developer/rest-api.rst:193
+msgid "``mediatext_remove_representations``"
+msgstr "``mediatext_remove_representations``"
+
+#: ../../developer/rest-api.rst:194
+msgid ""
+"``all`` to remove all representations, ``extracted`` to remove only "
+"automatically extracted representations. For items, applies to all their "
+"media."
+msgstr ""
+"``all`` pour supprimer toutes les représentations, ``extracted`` pour "
+"supprimer uniquement les représentations extraites automatiquement. Pour "
+"les contenus, s'applique à tous leurs médias."
+
+#: ../../developer/rest-api.rst:198
+msgid "``mediatext_extractors``"
+msgstr "``mediatext_extractors``"
+
+#: ../../developer/rest-api.rst:199
+msgid ""
+"An array of extractor names (``pdftotext``, ``odt2txt``, ``docx2txt``, "
+"``catdoc``, ``tesseract``) to run on the media (for items, on all their "
+"media). See :doc:`../automated-extraction`."
+msgstr ""
+"Un tableau de noms d'extracteurs (``pdftotext``, ``odt2txt``, "
+"``docx2txt``, ``catdoc``, ``tesseract``) à exécuter sur le média (pour "
+"les contenus, sur tous leurs médias). Voir :doc:`../automated-"
+"extraction`."
+
+#: ../../developer/rest-api.rst:203
+msgid "On media creation, all available extractors are run automatically."
+msgstr ""
+"À la création d'un média, tous les extracteurs disponibles sont exécutés "
+"automatiquement."
+
+#: ../../index.rst:28
+msgid "User documentation"
+msgstr "Documentation utilisateur"
+
+#: ../../index.rst:41
+msgid "Developer documentation"
+msgstr "Documentation développeur"
+
+#: ../../index.rst:2
+msgid "Introduction"
+msgstr "Introduction"
+
+#: ../../index.rst:4
+msgid ""
+"`Media Text <https://github.com/biblibre/omeka-s-module-MediaText>`__ "
+"allows to manage media textual representations (transcriptions, "
+"translations, transliteration, ...)."
+msgstr ""
+"`Media Text <https://github.com/biblibre/omeka-s-module-MediaText>`__ "
+"permet de gérer les représentations textuelles des médias "
+"(transcriptions, traductions, translittérations, ...)."
+
+#: ../../index.rst:8
+msgid ""
+"They can be imported from files, visualized, modified, and used in "
+"several ways (for display, search, ...)."
+msgstr ""
+"Elles peuvent être importées depuis des fichiers, visualisées, modifiées,"
+" et utilisées de plusieurs manières (pour l'affichage, la recherche, "
+"...)."
+
+#: ../../index.rst:12
+msgid "Features"
+msgstr "Fonctionnalités"
+
+#: ../../index.rst:14
+msgid "Supported formats: plain text, ALTO"
+msgstr "Formats pris en charge : texte brut, ALTO"
+
+#: ../../index.rst:15
+msgid "Resource page block rendering textual representation as plain text"
+msgstr ""
+"Bloc de page de ressource affichant les représentations textuelles en "
+"texte brut"
+
+#: ../../index.rst:16
+msgid "Automated text extraction for .pdf, .odt., .docx, .doc and .png files"
+msgstr ""
+"Extraction automatique du texte des fichiers .pdf, .odt, .docx, .doc et "
+".png"
+
+#: ../../index.rst:17
+msgid ""
+"Integration with the `Solr <https://github.com/biblibre/omeka-s-module-"
+"Solr>`__ module (makes the text content searchable)"
+msgstr ""
+"Intégration avec le module `Solr <https://github.com/biblibre/omeka-s"
+"-module-Solr>`__ (rend le contenu textuel interrogeable)"
+
+#: ../../index.rst:20
+msgid "Text documents are compressed using zlib to save disk space"
+msgstr ""
+"Les documents texte sont compressés avec zlib pour économiser l'espace "
+"disque"
+
+#: ../../index.rst:21
+msgid "Public/private visibility for each textual representation"
+msgstr "Visibilité publique/privée pour chaque représentation textuelle"
+
+#: ../../index.rst:22
+msgid ""
+"Batch removal and batch extraction of textual representations for items "
+"and media"
+msgstr ""
+"Suppression et extraction par lot des représentations textuelles pour les"
+" contenus et les médias"
+
+#: ../../index.rst:24
+msgid "Admin advanced search filter on the presence of textual representations"
+msgstr ""
+"Filtre de recherche avancée (administration) sur la présence de "
+"représentations textuelles"
+
+#: ../../index.rst:25
+msgid ""
+"REST API, and extension points for other modules (formats, ingesters, "
+"extractors)"
+msgstr ""
+"API REST, et points d'extension pour d'autres modules (formats, "
+"ingesteurs, extracteurs)"
+
+#: ../../managing-representations.rst:2
+msgid "Managing textual representations"
+msgstr "Gérer les représentations textuelles"
+
+#: ../../managing-representations.rst:4
+msgid ""
+"Textual representations are managed from the media pages of the admin "
+"interface."
+msgstr ""
+"Les représentations textuelles se gèrent depuis les pages des médias de "
+"l'interface d'administration."
+
+#: ../../managing-representations.rst:8
+msgid "Viewing the textual representations of a media"
+msgstr "Consulter les représentations textuelles d'un média"
+
+#: ../../managing-representations.rst:10
+msgid ""
+"On the page of a media, a tab named **Textual representations** lists all"
+" the textual representations of the media, in order. For each "
+"representation, the list shows:"
+msgstr ""
+"Sur la page d'un média, un onglet nommé **Représentations textuelles** "
+"liste toutes les représentations textuelles du média, dans l'ordre. Pour "
+"chaque représentation, la liste affiche :"
+
+#: ../../managing-representations.rst:14
+msgid "its title, linked to the representation page,"
+msgstr "son titre, avec un lien vers la page de la représentation,"
+
+#: ../../managing-representations.rst:15
+msgid "its type and its format,"
+msgstr "son type et son format,"
+
+#: ../../managing-representations.rst:16
+msgid "the mention \"Automatically extracted\" if it was created by an extractor,"
+msgstr ""
+"la mention « Extraite automatiquement » si elle a été créée par un "
+"extracteur,"
+
+#: ../../managing-representations.rst:17
+msgid "a \"private\" icon if it is private."
+msgstr "une icône « privé » si elle est privée."
+
+#: ../../managing-representations.rst:19
+msgid "Two actions are available for each representation:"
+msgstr "Deux actions sont disponibles pour chaque représentation :"
+
+#: ../../managing-representations.rst:21
+msgid "**Edit** opens the representation edit page,"
+msgstr "**Modifier** ouvre la page de modification de la représentation,"
+
+#: ../../managing-representations.rst:22
+msgid ""
+"**Details** opens a sidebar with the ID, type, format, source and content"
+" of the representation."
+msgstr ""
+"**Détails** ouvre une barre latérale avec l'ID, le type, le format, la "
+"source et le contenu de la représentation."
+
+#: ../../managing-representations.rst:26
+msgid "Representation page"
+msgstr "Page de la représentation"
+
+#: ../../managing-representations.rst:28
+msgid ""
+"The representation page shows the ID, type, format and source of the "
+"representation, along with its content. The content is displayed twice, "
+"side by side: as stored (for instance ALTO XML), and converted to plain "
+"text. This allows to check what will be displayed on public pages and "
+"indexed by search engines."
+msgstr ""
+"La page de la représentation affiche l'ID, le type, le format et la "
+"source de la représentation, ainsi que son contenu. Le contenu est "
+"affiché deux fois, côte à côte : tel qu'il est stocké (par exemple en XML"
+" ALTO), et converti en texte brut. Cela permet de vérifier ce qui sera "
+"affiché sur les pages publiques et indexé par les moteurs de recherche."
+
+#: ../../managing-representations.rst:35
+msgid "Adding textual representations"
+msgstr "Ajouter des représentations textuelles"
+
+#: ../../managing-representations.rst:37
+msgid "Edit the media, and click on the **Textual representations** tab."
+msgstr ""
+"Modifiez le média, puis cliquez sur l'onglet **Représentations "
+"textuelles**."
+
+#: ../../managing-representations.rst:38
+msgid ""
+"In the sidebar on the right, under **Import textual representation**, "
+"click on one of the following buttons:"
+msgstr ""
+"Dans la barre latérale à droite, sous **Importer une représentation "
+"textuelle**, cliquez sur l'un des boutons suivants :"
+
+#: ../../managing-representations.rst:41
+msgid "**Text area**: type or paste the content directly in a text field,"
+msgstr ""
+"**Zone de texte** : saisissez ou collez le contenu directement dans un "
+"champ texte,"
+
+#: ../../managing-representations.rst:42
+msgid "**Upload**: upload a file containing the content."
+msgstr "**Charger** : chargez un fichier contenant le contenu."
+
+#: ../../managing-representations.rst:44
+msgid "Fill in the form that appears:"
+msgstr "Remplissez le formulaire qui apparaît :"
+
+#: ../../managing-representations.rst:46
+msgid "**Title** (required),"
+msgstr "**Titre** (obligatoire),"
+
+#: ../../managing-representations.rst:47
+msgid "**Type** (required): Transcription, Transliteration, Translation or Other,"
+msgstr ""
+"**Type** (obligatoire) : Transcription, Translittération, Traduction ou "
+"Autre,"
+
+#: ../../managing-representations.rst:49
+msgid "**Format** (required): Plain text or ALTO,"
+msgstr "**Format** (obligatoire) : Texte brut ou ALTO,"
+
+#: ../../managing-representations.rst:50
+msgid "**Content** or **Upload file** depending on the chosen method."
+msgstr "**Contenu** ou **Charger le fichier** selon la méthode choisie."
+
+#: ../../managing-representations.rst:52
+msgid "Click on **Save**."
+msgstr "Cliquez sur **Enregistrer**."
+
+#: ../../managing-representations.rst:54
+msgid ""
+"Several representations can be added at once by clicking several times on"
+" the buttons. A new representation that has not been saved yet can be "
+"removed with its **Remove representation** icon."
+msgstr ""
+"Plusieurs représentations peuvent être ajoutées en une seule fois en "
+"cliquant plusieurs fois sur les boutons. Une nouvelle représentation qui "
+"n'a pas encore été enregistrée peut être retirée avec son icône **Retirer"
+" la représentation**."
+
+#: ../../managing-representations.rst:58
+msgid ""
+"When using **Upload**, the content of the file is copied in the database "
+"(the file itself is not kept) and the file name is stored as the source "
+"of the representation."
+msgstr ""
+"Avec **Charger**, le contenu du fichier est copié dans la base de données"
+" (le fichier lui-même n'est pas conservé) et le nom du fichier est "
+"enregistré comme source de la représentation."
+
+#: ../../managing-representations.rst:62
+msgid ""
+"The content is validated according to its format before being saved (see "
+":ref:`formats`). If the validation fails, an error message is displayed "
+"and the media is not saved."
+msgstr ""
+"Le contenu est validé en fonction de son format avant d'être enregistré "
+"(voir :ref:`formats`). Si la validation échoue, un message d'erreur est "
+"affiché et le média n'est pas enregistré."
+
+#: ../../managing-representations.rst:67
+msgid "Extracting textual representations"
+msgstr "Extraire des représentations textuelles"
+
+#: ../../managing-representations.rst:69
+msgid ""
+"The same sidebar contains a section named **Extract textual "
+"representation from media**. It lists the extractors that are able to "
+"handle the media file. Check one or more extractors and click on **Save**"
+" to create new textual representations from the media file."
+msgstr ""
+"La même barre latérale contient une section nommée **Extraire une "
+"représentation textuelle du média**. Elle liste les extracteurs capables "
+"de traiter le fichier du média. Cochez un ou plusieurs extracteurs et "
+"cliquez sur **Enregistrer** pour créer de nouvelles représentations "
+"textuelles à partir du fichier du média."
+
+#: ../../managing-representations.rst:74
+msgid "See :doc:`automated-extraction` for more details."
+msgstr "Voir :doc:`automated-extraction` pour plus de détails."
+
+#: ../../managing-representations.rst:77
+msgid "Reordering textual representations"
+msgstr "Réordonner les représentations textuelles"
+
+#: ../../managing-representations.rst:79
+msgid ""
+"On the media edit page, drag and drop representations using their handle,"
+" then click on **Save**. The order is used in the admin interface."
+msgstr ""
+"Sur la page de modification du média, faites glisser les représentations "
+"à l'aide de leur poignée, puis cliquez sur **Enregistrer**. Cet ordre est"
+" utilisé dans l'interface d'administration."
+
+#: ../../managing-representations.rst:83
+msgid "Changing the visibility"
+msgstr "Modifier la visibilité"
+
+#: ../../managing-representations.rst:85
+msgid ""
+"On the media edit page, click on the visibility icon (**Make private** / "
+"**Make public**) of a representation, then click on **Save**. See "
+":ref:`visibility`."
+msgstr ""
+"Sur la page de modification du média, cliquez sur l'icône de visibilité "
+"(**Rendre privé** / **Rendre public**) d'une représentation, puis cliquez"
+" sur **Enregistrer**. Voir :ref:`visibility`."
+
+#: ../../managing-representations.rst:90
+msgid "Editing a textual representation"
+msgstr "Modifier une représentation textuelle"
+
+#: ../../managing-representations.rst:92
+msgid ""
+"Click on the **Edit** icon of a representation (from the media page, the "
+"media edit page or the representation page). The edit form allows to "
+"change the title, the type, the format and the content of the "
+"representation."
+msgstr ""
+"Cliquez sur l'icône **Modifier** d'une représentation (depuis la page du "
+"média, la page de modification du média ou la page de la représentation)."
+" Le formulaire de modification permet de changer le titre, le type, le "
+"format et le contenu de la représentation."
+
+#: ../../managing-representations.rst:96
+msgid ""
+"The content is validated according to the selected format before being "
+"saved."
+msgstr ""
+"Le contenu est validé en fonction du format sélectionné avant d'être "
+"enregistré."
+
+#: ../../managing-representations.rst:99
+msgid "Deleting textual representations"
+msgstr "Supprimer des représentations textuelles"
+
+#: ../../managing-representations.rst:101
+msgid ""
+"On the media edit page, click on the **Delete** icon of a representation."
+" The representation is marked for removal, and can be restored with the "
+"**Restore** icon until the media is saved. It is deleted when clicking on"
+" **Save**."
+msgstr ""
+"Sur la page de modification du média, cliquez sur l'icône **Supprimer** "
+"d'une représentation. La représentation est marquée pour suppression, et "
+"peut être restaurée avec l'icône **Restaurer** tant que le média n'est "
+"pas enregistré. Elle est supprimée au clic sur **Enregistrer**."
+
+#: ../../managing-representations.rst:105
+msgid ""
+"To delete textual representations of many media at once, see :doc:`batch-"
+"edit`."
+msgstr ""
+"Pour supprimer les représentations textuelles de nombreux médias à la "
+"fois, voir :doc:`batch-edit`."
+
+#: ../../managing-representations.rst:109
+msgid "Permissions"
+msgstr "Droits d'accès"
+
+#: ../../managing-representations.rst:111
+msgid ""
+"Everybody can view textual representations, according to their visibility"
+" (see :ref:`visibility`)."
+msgstr ""
+"Tout le monde peut consulter les représentations textuelles, selon leur "
+"visibilité (voir :ref:`visibility`)."
+
+#: ../../managing-representations.rst:113
+msgid ""
+"Authors, reviewers, editors, site administrators and global "
+"administrators can create, edit and delete textual representations. Note "
+"that, as for any other change on a media, they need to be allowed to edit"
+" the media."
+msgstr ""
+"Les auteurs, relecteurs, éditeurs, administrateurs de site et "
+"administrateurs généraux peuvent créer, modifier et supprimer des "
+"représentations textuelles. Notez que, comme pour toute autre "
+"modification d'un média, ils doivent être autorisés à modifier le média."
+
+#: ../../mediatext-search.rst:5
+msgid "Admin advanced search"
+msgstr "Recherche avancée (administration)"
+
+#: ../../mediatext-search.rst:7
+msgid ""
+"Media Text adds a field named **Search by textual representations "
+"presence** to the advanced search form of items and media in the admin "
+"interface. It has the following options:"
+msgstr ""
+"Media Text ajoute un champ nommé **Recherche par présence de "
+"représentations textuelles** au formulaire de recherche avancée des "
+"contenus et des médias dans l'interface d'administration. Il propose les "
+"options suivantes :"
+
+#: ../../mediatext-search.rst:11
+msgid ""
+"*Has textual representations*: only returns items (or media) that have at"
+" least one textual representation (for items: at least one media of the "
+"item has a textual representation),"
+msgstr ""
+"*A des représentations textuelles* : ne retourne que les contenus (ou "
+"médias) qui ont au moins une représentation textuelle (pour les contenus "
+": au moins un média du contenu a une représentation textuelle),"
+
+#: ../../mediatext-search.rst:14
+msgid ""
+"*Has no textual representations*: only returns items (or media) without "
+"any textual representation."
+msgstr ""
+"*N'a pas de représentations textuelles* : ne retourne que les contenus "
+"(ou médias) sans aucune représentation textuelle."
+
+#: ../../mediatext-search.rst:18
+msgid "Full-text search with Solr"
+msgstr "Recherche plein texte avec Solr"
+
+#: ../../mediatext-search.rst:20
+msgid ""
+"When the `Solr <https://github.com/biblibre/omeka-s-module-Solr>`__ "
+"module (and the `Search <https://github.com/biblibre/omeka-s-module-"
+"Search>`__ module it depends on) is installed, the content of textual "
+"representations can be indexed, making it searchable."
+msgstr ""
+"Lorsque le module `Solr <https://github.com/biblibre/omeka-s-module-"
+"Solr>`__ (et le module `Search <https://github.com/biblibre/omeka-s"
+"-module-Search>`__ dont il dépend) est installé, le contenu des "
+"représentations textuelles peut être indexé, ce qui le rend "
+"interrogeable."
+
+#: ../../mediatext-search.rst:25
+msgid ""
+"Media Text adds a new source field to the Solr module, under **Media**, "
+"named **Media text representation content (plain text)**. It contains the"
+" content of all the textual representations of all the media of an item, "
+"converted to plain text (see :ref:`formats`)."
+msgstr ""
+"Media Text ajoute un nouveau champ source au module Solr, sous "
+"**Médias**, nommé **Contenu des représentations Media Text (texte "
+"brut)**. Il contient le contenu de toutes les représentations textuelles "
+"de tous les médias d'un contenu, converti en texte brut (voir "
+":ref:`formats`)."
+
+#: ../../mediatext-search.rst:30
+msgid "To use it:"
+msgstr "Pour l'utiliser :"
+
+#: ../../mediatext-search.rst:32
+msgid ""
+"Go to the Solr module configuration, and edit the mappings of the Solr "
+"index for items."
+msgstr ""
+"Allez dans la configuration du module Solr, et modifiez les "
+"correspondances (*mappings*) de l'index Solr pour les contenus."
+
+#: ../../mediatext-search.rst:34
+msgid ""
+"Add a new mapping using the source **Media › Media text representation "
+"content (plain text)**, and choose a Solr field suitable for full text "
+"(for instance a ``*_txt`` field)."
+msgstr ""
+"Ajoutez une nouvelle correspondance utilisant la source **Médias › "
+"Contenu des représentations Media Text (texte brut)**, et choisissez un "
+"champ Solr adapté au plein texte (par exemple un champ ``*_txt``)."
+
+#: ../../mediatext-search.rst:37
+msgid "Reindex the items."
+msgstr "Réindexez les contenus."
+
+#: ../../mediatext-search.rst:39
+msgid "See the documentation of the Solr module for more details."
+msgstr "Voir la documentation du module Solr pour plus de détails."
+
+#: ../../mediatext-search.rst:43
+msgid ""
+"Only items are supported. Textual representations are not added to "
+"indexed media."
+msgstr ""
+"Seuls les contenus sont pris en charge. Les représentations textuelles ne"
+" sont pas ajoutées aux médias indexés."
+
+#: ../../mediatext-search.rst:48
+msgid ""
+"Editing a textual representation from its own edit page does not modify "
+"the media nor the item, so the change is not detected by the Search "
+"module. Save the item (or rebuild the index) to update the indexed text."
+msgstr ""
+"Modifier une représentation textuelle depuis sa propre page de "
+"modification ne modifie ni le média ni le contenu : le changement n'est "
+"donc pas détecté par le module Search. Enregistrez le contenu (ou "
+"reconstruisez l'index) pour mettre à jour le texte indexé."
+
+#: ../../public-display.rst:2
+msgid "Public display"
+msgstr "Affichage public"
+
+#: ../../public-display.rst:4
+msgid ""
+"Textual representations can be displayed on the public media pages of a "
+"site using a resource page block."
+msgstr ""
+"Les représentations textuelles peuvent être affichées sur les pages "
+"publiques des médias d'un site à l'aide d'un bloc de page de ressource."
+
+#: ../../public-display.rst:8
+msgid "Resource page block"
+msgstr "Bloc de page de ressource"
+
+#: ../../public-display.rst:10
+msgid ""
+"Media Text provides a resource page block named **Textual representations"
+" as plain text**, compatible with media pages."
+msgstr ""
+"Media Text fournit un bloc de page de ressource nommé **Représentations "
+"textuelles en texte brut**, compatible avec les pages de médias."
+
+#: ../../public-display.rst:13
+msgid "To add it:"
+msgstr "Pour l'ajouter :"
+
+#: ../../public-display.rst:15
+msgid ""
+"In the admin interface, edit the site, and go to **Theme** (or **Resource"
+" pages**, depending on the theme and the Omeka S version)."
+msgstr ""
+"Dans l'interface d'administration, modifiez le site, et allez dans "
+"**Thème** (ou **Pages de ressource**, selon le thème et la version "
+"d'Omeka S)."
+
+#: ../../public-display.rst:17
+msgid ""
+"In the media page configuration, add the **Textual representations as "
+"plain text** block to a region."
+msgstr ""
+"Dans la configuration de la page des médias, ajoutez le bloc "
+"**Représentations textuelles en texte brut** à une région."
+
+#: ../../public-display.rst:19
+msgid "Save."
+msgstr "Enregistrez."
+
+#: ../../public-display.rst:21
+msgid ""
+"See `Configure resource pages <https://omeka.org/s/docs/user-"
+"manual/sites/site_theme/#configure-resource-pages>`__ in the Omeka S user"
+" manual."
+msgstr ""
+"Voir `Configurer les pages de ressource <https://omeka.org/s/docs/user-"
+"manual/sites/site_theme/#configure-resource-pages>`__ dans le manuel "
+"utilisateur d'Omeka S (en anglais)."
+
+#: ../../public-display.rst:25
+msgid ""
+"The block displays, for each textual representation of the media visible "
+"to the visitor (see :ref:`visibility`), its title and its content "
+"converted to plain text (see :ref:`formats`). Nothing is displayed if the"
+" media has no visible textual representation."
+msgstr ""
+"Le bloc affiche, pour chaque représentation textuelle du média visible "
+"par le visiteur (voir :ref:`visibility`), son titre et son contenu "
+"converti en texte brut (voir :ref:`formats`). Rien n'est affiché si le "
+"média n'a aucune représentation textuelle visible."
+
+#: ../../public-display.rst:31
+msgid "Styling"
+msgstr "Mise en forme"
+
+#: ../../public-display.rst:33
+msgid "The block is rendered as an HTML definition list:"
+msgstr "Le bloc est rendu sous forme de liste de définitions HTML :"
+
+#: ../../public-display.rst:45
+msgid ""
+"The module stylesheet (``asset/css/mediatext-site.css``) preserves line "
+"breaks of the text. It can be overridden in the theme."
+msgstr ""
+"La feuille de style du module (``asset/css/mediatext-site.css``) préserve"
+" les retours à la ligne du texte. Elle peut être surchargée dans le "
+"thème."
+
+#: ../../requirements.rst:2
+msgid "Requirements"
+msgstr "Prérequis"
+
+#: ../../requirements.rst:4
+msgid "Omeka S ≥ 4.2.0"
+msgstr "Omeka S ≥ 4.2.0"
+
+#: ../../requirements.rst:5
+msgid "PHP extension zlib"
+msgstr "Extension PHP zlib"
+
+#: ../../requirements.rst:7
+msgid ""
+"If automated text extraction is needed, the following programs are "
+"required:"
+msgstr ""
+"Si l'extraction automatique du texte est nécessaire, les programmes "
+"suivants sont requis :"
+
+#: ../../requirements.rst:9
+msgid "``pdftotext`` (for .pdf files)"
+msgstr "``pdftotext`` (pour les fichiers .pdf)"
+
+#: ../../requirements.rst:10
+msgid "``odt2txt`` (for .odt files)"
+msgstr "``odt2txt`` (pour les fichiers .odt)"
+
+#: ../../requirements.rst:11
+msgid "``docx2txt`` (for .docx files)"
+msgstr "``docx2txt`` (pour les fichiers .docx)"
+
+#: ../../requirements.rst:12
+msgid "``catdoc`` (for .doc files)"
+msgstr "``catdoc`` (pour les fichiers .doc)"
+
+#: ../../requirements.rst:13
+msgid "``tesseract`` (for .png files)"
+msgstr "``tesseract`` (pour les fichiers .png)"
+
+#: ../../requirements.rst:15
+msgid ""
+"None of these programs is mandatory. Each one is only needed for the file"
+" type it handles. See :doc:`automated-extraction` for more details."
+msgstr ""
+"Aucun de ces programmes n'est obligatoire. Chacun n'est nécessaire que "
+"pour le type de fichier qu'il traite. Voir :doc:`automated-extraction` "
+"pour plus de détails."
+
+#: ../../requirements.rst:19
+msgid "Installing the extraction programs"
+msgstr "Installer les programmes d'extraction"
+
+#: ../../requirements.rst:21
+msgid "On Debian and Ubuntu, all programs can be installed with:"
+msgstr "Sous Debian et Ubuntu, tous les programmes peuvent être installés avec :"
+
+#: ../../requirements.rst:27
+msgid ""
+"``tesseract-ocr`` only installs the English language data. Additional "
+"languages can be installed with the corresponding ``tesseract-"
+"ocr-<lang>`` packages (for instance ``tesseract-ocr-fra`` for French)."
+msgstr ""
+"``tesseract-ocr`` n'installe que les données de langue anglaise. D'autres"
+" langues peuvent être installées avec les paquets ``tesseract-"
+"ocr-<lang>`` correspondants (par exemple ``tesseract-ocr-fra`` pour le "
+"français)."
+
+#: ../../requirements.rst:31
+msgid ""
+"The programs are looked up in the ``PATH`` of the user that runs Omeka S "
+"(for instance ``www-data``), using ``command -v``. If a program is "
+"installed in a non-standard location, make sure that this location is in "
+"the ``PATH`` of that user."
+msgstr ""
+"Les programmes sont recherchés dans le ``PATH`` de l'utilisateur qui "
+"exécute Omeka S (par exemple ``www-data``), à l'aide de ``command -v``. "
+"Si un programme est installé dans un emplacement non standard, assurez-"
+"vous que cet emplacement figure dans le ``PATH`` de cet utilisateur."
+
+#: ../../requirements.rst:37
+msgid "Installation"
+msgstr "Installation"
+
+#: ../../requirements.rst:39
+msgid ""
+"Install the module like any other Omeka S module. See `Adding modules to "
+"Omeka S <https://omeka.org/s/docs/user-manual/modules/#adding-modules-to-"
+"omeka-s>`__."
+msgstr ""
+"Installez le module comme n'importe quel autre module Omeka S. Voir "
+"`Adding modules to Omeka S <https://omeka.org/s/docs/user-manual/modules"
+"/#adding-modules-to-omeka-s>`__ (en anglais)."
+
+#: ../../requirements.rst:42
+msgid ""
+"Installing the module creates a database table named "
+"``mediatext_representation``. Uninstalling the module deletes this table,"
+" and therefore **all textual representations**."
+msgstr ""
+"L'installation du module crée une table de base de données nommée "
+"``mediatext_representation``. La désinstallation du module supprime cette"
+" table, et donc **toutes les représentations textuelles**."
+
+#: ../../textual-representations.rst:2
+msgid "Textual representations"
+msgstr "Représentations textuelles"
+
+#: ../../textual-representations.rst:4
+msgid ""
+"A textual representation is a resource attached to a media. It describes "
+"the text contained in the media (whether the media is an image, a PDF, a "
+"video, a sound, or anything else)."
+msgstr ""
+"Une représentation textuelle est une ressource rattachée à un média. Elle"
+" décrit le texte contenu dans le média (qu'il s'agisse d'une image, d'un "
+"PDF, d'une vidéo, d'un son ou de toute autre chose)."
+
+#: ../../textual-representations.rst:8
+msgid ""
+"It is mostly useful to store transcriptions of a media, but it can be "
+"useful to store translations or transliterations."
+msgstr ""
+"Elle sert principalement à stocker les transcriptions d'un média, mais "
+"peut aussi servir à stocker des traductions ou des translittérations."
+
+#: ../../textual-representations.rst:11
+msgid ""
+"Textual representations can be stored as plain text or `ALTO "
+"<https://www.loc.gov/standards/alto/>`__."
+msgstr ""
+"Les représentations textuelles peuvent être stockées en texte brut ou en "
+"`ALTO <https://www.loc.gov/standards/alto/>`__."
+
+#: ../../textual-representations.rst:14
+msgid "A media can have several textual representations."
+msgstr "Un média peut avoir plusieurs représentations textuelles."
+
+#: ../../textual-representations.rst:17
+msgid "Properties"
+msgstr "Propriétés"
+
+#: ../../textual-representations.rst:19
+msgid "Each textual representation has the following properties:"
+msgstr "Chaque représentation textuelle possède les propriétés suivantes :"
+
+#: ../../textual-representations.rst:21
+msgid "Title"
+msgstr "Titre"
+
+#: ../../textual-representations.rst:22
+msgid ""
+"A free-form title (required). Automatically extracted representations are"
+" titled \"Extracted by <extractor>\" (for instance \"Extracted by "
+"pdftotext\")."
+msgstr ""
+"Un titre libre (obligatoire). Les représentations extraites "
+"automatiquement sont intitulées « Extrait par <extracteur> » (par exemple"
+" « Extrait par pdftotext »)."
+
+#: ../../textual-representations.rst:25
+msgid "Type"
+msgstr "Type"
+
+#: ../../textual-representations.rst:26
+msgid "One of *Transcription*, *Transliteration*, *Translation* or *Other*."
+msgstr "*Transcription*, *Translittération*, *Traduction* ou *Autre*."
+
+#: ../../textual-representations.rst:28
+msgid "Format"
+msgstr "Format"
+
+#: ../../textual-representations.rst:29
+msgid "The format of the content: *Plain text* or *ALTO*. See `Formats`_."
+msgstr "Le format du contenu : *Texte brut* ou *ALTO*. Voir `Formats`_."
+
+#: ../../textual-representations.rst:31
+msgid "Content"
+msgstr "Contenu"
+
+#: ../../textual-representations.rst:32
+msgid "The text itself."
+msgstr "Le texte lui-même."
+
+#: ../../textual-representations.rst:34 ../../textual-representations.rst:92
+msgid "Visibility"
+msgstr "Visibilité"
+
+#: ../../textual-representations.rst:35
+msgid "Public or private. See :ref:`visibility`."
+msgstr "Public ou privé. Voir :ref:`visibility`."
+
+#: ../../textual-representations.rst:37
+msgid "Source"
+msgstr "Source"
+
+#: ../../textual-representations.rst:38
+msgid ""
+"Where the content comes from. It is set automatically to the name of the "
+"uploaded file when using the *Upload* method, or to the source of the "
+"media when the representation is automatically extracted."
+msgstr ""
+"La provenance du contenu. Elle est définie automatiquement avec le nom du"
+" fichier chargé lors de l'utilisation de la méthode *Charger*, ou avec la"
+" source du média lorsque la représentation est extraite automatiquement."
+
+#: ../../textual-representations.rst:42
+msgid "Automatically extracted"
+msgstr "Extraite automatiquement"
+
+#: ../../textual-representations.rst:43
+msgid ""
+"Whether the representation was created by an extractor (see :doc"
+":`automated-extraction`). This allows to remove only the extracted "
+"representations in batch (see :doc:`batch-edit`)."
+msgstr ""
+"Indique si la représentation a été créée par un extracteur (voir :doc"
+":`automated-extraction`). Cela permet de supprimer par lot uniquement les"
+" représentations extraites (voir :doc:`batch-edit`)."
+
+#: ../../textual-representations.rst:47
+msgid "Position"
+msgstr "Position"
+
+#: ../../textual-representations.rst:48
+msgid "The order of the representation among the representations of the media."
+msgstr "L'ordre de la représentation parmi les représentations du média."
+
+#: ../../textual-representations.rst:50
+msgid "Created / Modified"
+msgstr "Créée / Modifiée"
+
+#: ../../textual-representations.rst:51
+msgid "Date of creation and date of last modification."
+msgstr "Date de création et date de dernière modification."
+
+#: ../../textual-representations.rst:56
+msgid "Formats"
+msgstr "Formats"
+
+#: ../../textual-representations.rst:59
+msgid "Plain text"
+msgstr "Texte brut"
+
+#: ../../textual-representations.rst:61
+msgid "Any text is accepted. The content is stored and displayed as is."
+msgstr "Tout texte est accepté. Le contenu est stocké et affiché tel quel."
+
+#: ../../textual-representations.rst:64
+msgid "ALTO"
+msgstr "ALTO"
+
+#: ../../textual-representations.rst:66
+msgid ""
+"`ALTO <https://www.loc.gov/standards/alto/>`__ (Analyzed Layout and Text "
+"Object) is an XML format commonly produced by OCR software. It contains "
+"the text and its position on the page."
+msgstr ""
+"`ALTO <https://www.loc.gov/standards/alto/>`__ (*Analyzed Layout and Text"
+" Object*) est un format XML couramment produit par les logiciels d'OCR. "
+"Il contient le texte et sa position sur la page."
+
+#: ../../textual-representations.rst:70
+msgid "When an ALTO representation is saved, the module checks that:"
+msgstr ""
+"Lors de l'enregistrement d'une représentation ALTO, le module vérifie que"
+" :"
+
+#: ../../textual-representations.rst:72
+msgid "the content is not empty,"
+msgstr "le contenu n'est pas vide,"
+
+#: ../../textual-representations.rst:73
+msgid "the content is well-formed XML,"
+msgstr "le contenu est un XML bien formé,"
+
+#: ../../textual-representations.rst:74
+msgid "the root element is ``alto``,"
+msgstr "l'élément racine est ``alto``,"
+
+#: ../../textual-representations.rst:75
+msgid "the root element has a namespace (any ALTO version is accepted)."
+msgstr ""
+"l'élément racine possède un espace de noms (toutes les versions d'ALTO "
+"sont acceptées)."
+
+#: ../../textual-representations.rst:77
+msgid ""
+"If one of these checks fails, the representation is not saved and an "
+"error is displayed."
+msgstr ""
+"Si l'une de ces vérifications échoue, la représentation n'est pas "
+"enregistrée et une erreur est affichée."
+
+#: ../../textual-representations.rst:80
+msgid ""
+"The module is able to convert ALTO to plain text. This plain text version"
+" is used for display on public pages (see :doc:`public-display`) and for "
+"indexing (see :doc:`mediatext-search`). It is built as follows:"
+msgstr ""
+"Le module est capable de convertir l'ALTO en texte brut. Cette version en"
+" texte brut est utilisée pour l'affichage sur les pages publiques (voir "
+":doc:`public-display`) et pour l'indexation (voir :doc:`mediatext-"
+"search`). Elle est construite comme suit :"
+
+#: ../../textual-representations.rst:84
+msgid ""
+"each ``String`` element of a ``TextLine`` is replaced by its ``CONTENT`` "
+"attribute, separated by spaces,"
+msgstr ""
+"chaque élément ``String`` d'une ``TextLine`` est remplacé par son "
+"attribut ``CONTENT``, les éléments étant séparés par des espaces,"
+
+#: ../../textual-representations.rst:86
+msgid "each ``TextLine`` is put on its own line,"
+msgstr "chaque ``TextLine`` est placée sur sa propre ligne,"
+
+#: ../../textual-representations.rst:87
+msgid "each ``TextBlock`` is separated from the next one by an empty line."
+msgstr "chaque ``TextBlock`` est séparé du suivant par une ligne vide."
+
+#: ../../textual-representations.rst:94
+msgid ""
+"Each textual representation can be either public or private. New "
+"representations are public by default."
+msgstr ""
+"Chaque représentation textuelle peut être publique ou privée. Les "
+"nouvelles représentations sont publiques par défaut."
+
+#: ../../textual-representations.rst:97
+msgid "A textual representation is visible:"
+msgstr "Une représentation textuelle est visible :"
+
+#: ../../textual-representations.rst:99
+msgid ""
+"to users who can view all resources (global administrators, site "
+"administrators, editors and reviewers), whatever its visibility,"
+msgstr ""
+"par les utilisateurs qui peuvent voir toutes les ressources "
+"(administrateurs généraux, administrateurs de site, éditeurs et "
+"relecteurs), quelle que soit sa visibilité,"
+
+#: ../../textual-representations.rst:101
+msgid "to the owner of the media it is attached to, whatever its visibility,"
+msgstr ""
+"par le propriétaire du média auquel elle est rattachée, quelle que soit "
+"sa visibilité,"
+
+#: ../../textual-representations.rst:102
+msgid ""
+"to everybody else (including anonymous visitors), if it is public **and**"
+" if the media it is attached to is visible to them."
+msgstr ""
+"par toute autre personne (y compris les visiteurs anonymes), si elle est "
+"publique **et** si le média auquel elle est rattachée leur est visible."
+
+#: ../../textual-representations.rst:105
+msgid ""
+"In other words, a public representation of a private media is not visible"
+" to the public."
+msgstr ""
+"Autrement dit, une représentation publique d'un média privé n'est pas "
+"visible par le public."
+
+#: ../../textual-representations.rst:109
+msgid "Storage"
+msgstr "Stockage"
+
+#: ../../textual-representations.rst:111
+msgid ""
+"The content of textual representations is compressed in the database "
+"using zlib (gzip format) to save disk space. The compression level can be"
+" configured (see :doc:`configuration`)."
+msgstr ""
+"Le contenu des représentations textuelles est compressé dans la base de "
+"données avec zlib (format gzip) pour économiser l'espace disque. Le "
+"niveau de compression est configurable (voir :doc:`configuration`)."
+
+#: ../../textual-representations.rst:115
+msgid ""
+"Representations are attached to a media: when a media is deleted, all its"
+" textual representations are deleted too."
+msgstr ""
+"Les représentations sont rattachées à un média : lorsqu'un média est "
+"supprimé, toutes ses représentations textuelles sont également "
+"supprimées."
+

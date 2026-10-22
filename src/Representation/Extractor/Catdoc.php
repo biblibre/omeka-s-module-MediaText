@@ -29,7 +29,7 @@ class Catdoc extends AbstractFileRepresentationExtractor
 
     public function canExtractFrom(MediaRepresentation $media): bool
     {
-        return $media->hasOriginal() && $media->mediaType() === 'application/vnd.oasis.opendocument.text';
+        return $media->hasOriginal() && $media->mediaType() === 'application/msword';
     }
 
     protected function getRepresentationsFromFile(string $filepath): array
@@ -39,7 +39,7 @@ class Catdoc extends AbstractFileRepresentationExtractor
             return [];
         }
 
-        $commandArgs = [$commandPath, '--encoding=UTF-8', $filepath];
+        $commandArgs = [$commandPath, '-d utf-8', $filepath];
         $command = implode(' ', array_map('escapeshellarg', $commandArgs));
         $content = $this->cli->execute($command);
         if ($content === false) {
